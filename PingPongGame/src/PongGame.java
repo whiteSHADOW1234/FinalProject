@@ -37,6 +37,7 @@ public class PongGame extends Application{
 		// start the game function
 
 		launch();
+        // FUCK
 	}
 
 }
