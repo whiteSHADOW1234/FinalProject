@@ -18,9 +18,9 @@ public class GamePanel extends JPanel implements Runnable {
 	static final int BALL_DIAMETER = 20;
 	static final int PADDLE_WIDTH = 25;
 	static final int PADDLE_HEIGHT = 100;
-	static final int MP_bar_WIDTH = 0;
+	static int MP_bar_WIDTH = 0;
 	static final int MP_bar_HEIGHT = 20;
-	static final int white_bar_HEIGHT = 50;
+	static int white_bar_HEIGHT = 50;
 
 	Thread gameThread;
 	Image image;
@@ -34,8 +34,14 @@ public class GamePanel extends JPanel implements Runnable {
 	Score score;
 
 	boolean keep_going = true;
+	boolean beta = true;  // only for testing
+	long now;
 
 	GamePanel() {
+		if (beta) {
+			MP_bar_WIDTH = 500;
+			white_bar_HEIGHT = 100;
+		}
 		newPaddles();
 		newBall();
 		newMP_bar();
@@ -173,14 +179,52 @@ public class GamePanel extends JPanel implements Runnable {
 			return 0;
 	}
 
+	public void skill_smash(int id) {
+		switch (id) {
+			case 1:
+				if (mp_bar_1.width >= 500) {
+					if (ball.xVelocity > 0) {
+						ball.xVelocity += 10;
+						if (ball.yVelocity > 0)
+							ball.yVelocity += 10;
+						else
+							ball.yVelocity -= 10;
+					} else {
+						ball.xVelocity *= -1;
+						ball.yVelocity /= 10;
+					}
+
+					mp_bar_1.width -= 500;
+				}
+				break;
+			case 2:
+				if (mp_bar_2.width >= 500) {
+					if (ball.xVelocity < 0) {
+						ball.xVelocity -= 10;
+						if (ball.yVelocity > 0)
+							ball.yVelocity += 10;
+						else
+							ball.yVelocity -= 10;
+					} else {
+						ball.xVelocity *= -1;
+						ball.yVelocity /= 10;
+					}
+
+					mp_bar_2.width -= 500;
+				}
+		}
+
+	}
+
 	public void run() {
 		// game loop
+		
 		long lastTime = System.nanoTime();
 		double amountOfTicks = 60.0;
 		double ns = 1000000000 / amountOfTicks;
 		double delta = 0;
 		while (keep_going) {
-			long now = System.nanoTime();
+			now = System.nanoTime();
 			delta += (now - lastTime) / ns;
 			lastTime = now;
 			if (delta >= 1) {
@@ -189,7 +233,7 @@ public class GamePanel extends JPanel implements Runnable {
 				repaint();
 				delta--;
 			}
-			
+
 		}
 
 	}
@@ -198,6 +242,11 @@ public class GamePanel extends JPanel implements Runnable {
 		public void keyPressed(KeyEvent e) {
 			paddle1.keyPressed(e);
 			paddle2.keyPressed(e);
+			if (e.getKeyCode() == KeyEvent.VK_D) {
+				skill_smash(1);
+			} else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+				skill_smash(2);
+			}
 		}
 
 		public void keyReleased(KeyEvent e) {
