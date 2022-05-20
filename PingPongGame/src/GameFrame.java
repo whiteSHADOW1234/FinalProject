@@ -17,7 +17,7 @@ public class GameFrame extends JFrame {
 		this.setLocationRelativeTo(null);
 	}
 
-	public void check_if_GG() {
+	public int check_if_GG() {
 		long lastTime = System.nanoTime();
 		double amountOfTicks = 30.0;
 		double ns = 1000000000 / amountOfTicks;
@@ -27,8 +27,8 @@ public class GameFrame extends JFrame {
 			delta += (now - lastTime) / ns;
 			lastTime = now;
 			if (delta >= 1) {
-				
-				if(panel.GG())
+				// System.out.println("stuck");
+				if(panel.GG() == 1 || panel.GG() == 2) 
 				{
 					break;
 				}
@@ -37,6 +37,7 @@ public class GameFrame extends JFrame {
 		}
 		System.out.println("GG");
 		this.dispose();
+		return panel.GG();
 	}
 
 }

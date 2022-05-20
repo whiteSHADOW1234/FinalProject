@@ -49,6 +49,7 @@ public class PongGame extends Application {
         stage.close();
         GameFrame GF = new GameFrame();
         GF.check_if_GG();
+        // win_display(temp);
         try 
         {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_endpage.fxml"));
@@ -57,10 +58,11 @@ public class PongGame extends Application {
             stage.setTitle("Greedy Snake");
             stage.setScene(background);
             stage.show();
-
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
+
 
     }
 
@@ -85,6 +87,7 @@ public class PongGame extends Application {
         stage.close();
         GameFrame GF = new GameFrame();
         GF.check_if_GG();
+
         try 
         {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_endpage.fxml"));
@@ -98,6 +101,19 @@ public class PongGame extends Application {
             e.printStackTrace();
         }
 
+    }
+    public void win_display(int temp)
+    {
+        if (temp == 1)
+        {
+            System.out.println("blue");
+            situation.setText("藍方獲勝");
+        }
+        else if(temp == 2)
+        {
+            System.out.println("red");
+            situation.setText("紅方獲勝");
+        }
     }
 
     
