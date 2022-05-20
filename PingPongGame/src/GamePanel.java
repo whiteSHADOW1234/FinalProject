@@ -154,6 +154,10 @@ public class GamePanel extends JPanel implements Runnable {
 	public boolean GG(){
 		if (score.player1 == 2 || score.player2 == 2) {
 			keep_going = false;
+
+			score.player1 = 0;
+			score.player2 = 0;
+			
 			return true;
 			// System.exit(0);
 		}
