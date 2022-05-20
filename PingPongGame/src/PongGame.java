@@ -9,6 +9,8 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class PongGame extends Application {
+    static int temp;
+    static int restart_press = 0;
 
     @FXML
     private Button start;
@@ -21,7 +23,7 @@ public class PongGame extends Application {
 
     @FXML
     private Button restart;
-    
+
     @FXML
     private Label situation;
 
@@ -37,38 +39,57 @@ public class PongGame extends Application {
 
     @FXML
     void restart(ActionEvent event) {
-        if (event.getSource() == restart)
-        {
+        if (restart_press == 0) {
+            win_display();
+            restart.setText("restart");
+            restart_press++;
+        } else if (restart_press >= 1) {
+            restart_press = 0;
             playwindow();
+        }
+
+        // situation.setText("我幹你娘");
+    }
+
+    public void win_display() {
+        if (PongGame.temp == 1) {
+            System.out.println("blue");
+            situation.setText("藍方獲勝");
+        } else if (PongGame.temp == 2) {
+            System.out.println("red");
+            situation.setText("紅方獲勝");
+        } else {
+            situation.setText("Error " + PongGame.temp);
         }
     }
 
     @FXML
     void startgame(ActionEvent event) {
-        Stage stage = (Stage)start.getScene().getWindow();
+        Stage stage = (Stage) start.getScene().getWindow();
         stage.close();
         GameFrame GF = new GameFrame();
-        GF.check_if_GG();
-        // win_display(temp);
-        try 
-        {
+        PongGame.temp = GF.check_if_GG();
+
+        end_page_starter(stage);
+        // win_display();
+
+    }
+
+    public void end_page_starter(Stage stage) {
+        try {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_endpage.fxml"));
 
             Scene background = new Scene(root);
             stage.setTitle("Greedy Snake");
             stage.setScene(background);
             stage.show();
-            
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
     public void start(Stage stage) {
-        try 
-        {
+        try {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_startpage.fxml"));
 
             Scene background = new Scene(root);
@@ -81,46 +102,18 @@ public class PongGame extends Application {
         }
     }
 
-    public void playwindow()
-    {
-        Stage stage = (Stage)restart.getScene().getWindow();
+    public void playwindow() {
+        Stage stage = (Stage) restart.getScene().getWindow();
         stage.close();
         GameFrame GF = new GameFrame();
-        GF.check_if_GG();
+        PongGame.temp = GF.check_if_GG();
 
-        try 
-        {
-            Parent root = FXMLLoader.load(getClass().getResource("final_project_endpage.fxml"));
-
-            Scene background = new Scene(root);
-            stage.setTitle("Greedy Snake");
-            stage.setScene(background);
-            stage.show();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        end_page_starter(stage);
+        // win_display();
 
     }
-    public void win_display(int temp)
-    {
-        if (temp == 1)
-        {
-            System.out.println("blue");
-            situation.setText("藍方獲勝");
-        }
-        else if(temp == 2)
-        {
-            System.out.println("red");
-            situation.setText("紅方獲勝");
-        }
-    }
 
-    
     public static void main(String[] args) {
-        // GameFrame frame = new GameFrame();
-        // new GameFrame();
-        // start the game function
 
         launch();
     }

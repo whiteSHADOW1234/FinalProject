@@ -27,7 +27,7 @@ public class GamePanel extends JPanel implements Runnable {
 	Score score;
 
 	boolean keep_going = true;
-	boolean beta = true;  // only for testing
+	boolean beta = true; // only for testing
 	long now;
 
 	GamePanel() {
@@ -150,7 +150,7 @@ public class GamePanel extends JPanel implements Runnable {
 		}
 	}
 
-	public int GG(){
+	public int GG() {
 		if (score.player1 == 2) {
 			keep_going = false;
 
@@ -158,17 +158,14 @@ public class GamePanel extends JPanel implements Runnable {
 			// score.player2 = 0;
 			return 1;
 
-		}
-		else if(score.player2 == 2)
-		{
+		} else if (score.player2 == 2) {
 			keep_going = false;
 
 			// score.player1 = 0;
 			// score.player2 = 0;
 
 			return 2;
-		}
-		else 
+		} else
 			return 0;
 	}
 
@@ -205,13 +202,19 @@ public class GamePanel extends JPanel implements Runnable {
 
 					mp_bar_2.width -= 500;
 				}
+
+		}
+		if (beta) {
+			ball.xVelocity *= 1000;
+			mp_bar_2.width += 500;
+			mp_bar_1.width += 500;
 		}
 
 	}
 
 	public void run() {
 		// game loop
-		
+
 		long lastTime = System.nanoTime();
 		double amountOfTicks = 60.0;
 		double ns = 1000000000 / amountOfTicks;

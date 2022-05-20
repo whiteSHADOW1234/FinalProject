@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PongGame">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PongGame">
    <children>
       <ImageView fitHeight="613.0" fitWidth="710.0" layoutX="-9.0" layoutY="-164.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -19,12 +19,12 @@
             <Font size="39.0" />
          </font>
       </Label>
-      <Button fx:id="restart" layoutX="253.0" layoutY="200.0" mnemonicParsing="false" onAction="#restart" prefHeight="33.0" prefWidth="94.0" text="restart">
+      <Button fx:id="restart" layoutX="219.0" layoutY="200.0" mnemonicParsing="false" onAction="#restart" prefHeight="43.0" prefWidth="162.0" text="check board">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button fx:id="quit" layoutX="253.0" layoutY="264.0" mnemonicParsing="false" onAction="#Quit" prefHeight="41.0" prefWidth="94.0" text="Quit">
+      <Button fx:id="quit" layoutX="219.0" layoutY="266.0" mnemonicParsing="false" onAction="#Quit" prefHeight="43.0" prefWidth="162.0" text="Quit">
          <font>
             <Font size="20.0" />
          </font>

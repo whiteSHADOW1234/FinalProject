@@ -22,13 +22,15 @@ public class GameFrame extends JFrame {
 		double amountOfTicks = 30.0;
 		double ns = 1000000000 / amountOfTicks;
 		double delta = 0;
+		int gameend;
 		while (true) {
 			long now = System.nanoTime();
 			delta += (now - lastTime) / ns;
 			lastTime = now;
 			if (delta >= 1) {
 				// System.out.println("stuck");
-				if(panel.GG() == 1 || panel.GG() == 2) 
+				gameend = panel.GG();
+				if(gameend == 1 || gameend == 2) 
 				{
 					break;
 				}
@@ -37,7 +39,7 @@ public class GameFrame extends JFrame {
 		}
 		System.out.println("GG");
 		this.dispose();
-		return panel.GG();
+		return gameend;
 	}
 
 }
