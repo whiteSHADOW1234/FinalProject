@@ -1,24 +1,32 @@
 import java.awt.*;
 
-public class MP_bar extends Rectangle{
+public class MP_bar extends Rectangle {
     int id;
+
     MP_bar(int x, int y, int MP_WIDTH, int MP_HEIGHT, int id) {
-		super(x, y, MP_WIDTH, MP_HEIGHT);
-		this.id = id;
-	}
-
-    public void increase(){
-
+        super(x, y, MP_WIDTH, MP_HEIGHT);
+        this.id = id;
     }
 
-    public void draw(Graphics g){
+    public void increase(boolean hit_white_bar) {
+        if (hit_white_bar) {
+            super.width += 100;
+        } else {
+            super.width += 10;
+        }
+        if (super.width >= 500) {
+            super.width = 500;
+        }
+    }
+
+    public void draw(Graphics g) {
         if (id == 1)
-			g.setColor(Color.blue);
-		else
-			g.setColor(Color.red);
-		g.fillRect(x, y, width, height);
-		// white
-		// g.setColor(Color.white);
-		// g.fillRect(x, y + 40, width, height - 80);
+            g.setColor(Color.blue);
+        else
+            g.setColor(Color.red);
+        g.fillRect(x, y, width, height);
+        // white
+        // g.setColor(Color.white);
+        // g.fillRect(x, y + 40, width, height - 80);
     }
 }
