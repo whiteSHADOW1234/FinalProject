@@ -7,19 +7,20 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class PongGame extends Application{
+public class PongGame extends Application {
 
-	@FXML
+    @FXML
     private Button start;
 
     @FXML
     void startgame(ActionEvent event) {
-		GameFrame frame = new GameFrame();
+        Stage stage = (Stage)start.getScene().getWindow();
+        stage.close();
+        new GameFrame();
     }
-	
-	public void start(Stage stage) {
-		try {
 
+    public void start(Stage stage) {
+        try {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_startpage.fxml"));
 
             Scene background = new Scene(root);
@@ -30,14 +31,14 @@ public class PongGame extends Application{
         } catch (Exception e) {
             e.printStackTrace();
         }
-	}
-	public static void main(String[] args) {
-		// GameFrame frame = new GameFrame();
-		// new GameFrame();
-		// start the game function
+    }
 
-		launch();
-        // FUCK
-	}
+    public static void main(String[] args) {
+        // GameFrame frame = new GameFrame();
+        // new GameFrame();
+        // start the game function
+
+        launch();
+    }
 
 }
