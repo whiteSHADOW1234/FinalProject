@@ -175,7 +175,7 @@ public class GamePanel extends JPanel implements Runnable {
 			case 1:
 				if (mp_bar_1.width >= 500) {
 					if (ball.xVelocity > 0) {
-						ball.xVelocity *= -1;
+						ball.xVelocity += 10;
 						if (ball.yVelocity > 0)
 							ball.yVelocity += 10;
 						else
@@ -191,7 +191,7 @@ public class GamePanel extends JPanel implements Runnable {
 			case 2:
 				if (mp_bar_2.width >= 500) {
 					if (ball.xVelocity < 0) {
-						ball.xVelocity *= -1;
+						ball.xVelocity -= 10;
 						if (ball.yVelocity > 0)
 							ball.yVelocity += 10;
 						else
