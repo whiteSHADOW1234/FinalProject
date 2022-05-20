@@ -37,18 +37,33 @@ public class PongGame extends Application {
         System.exit(0);
     }
 
+    public void initialize() {
+        try {
+            if (PongGame.temp == 1) {
+                System.out.println("blue");
+                situation.setText("藍方獲勝");
+            } else if (PongGame.temp == 2) {
+                System.out.println("red");
+                situation.setText("紅方獲勝");
+            } else {
+                situation.setText("Error " + PongGame.temp);
+            }
+        } catch (Exception e) {
+        }
+    }
+
     @FXML
     void restart(ActionEvent event) {
-        if (restart_press == 0) {
-            win_display();
-            restart.setText("restart");
-            restart_press++;
-        } else if (restart_press >= 1) {
-            restart_press = 0;
-            playwindow();
-        }
+        // if (restart_press == 0) {
+        //     win_display();
+        //     restart.setText("restart");
+        //     restart_press++;
+        // } else if (restart_press >= 1) {
+        //     restart_press = 0;
+        //     playwindow();
+        // }
 
-        // situation.setText("我幹你娘");
+        playwindow();
     }
 
     public void win_display() {
