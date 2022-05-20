@@ -3,13 +3,6 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 
-import javafx.application.Platform;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.paint.PhongMaterial;
-import javafx.stage.Stage;
-
 public class GamePanel extends JPanel implements Runnable {
 
 	static final int GAME_WIDTH = 1000;
