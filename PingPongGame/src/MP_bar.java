@@ -10,9 +10,9 @@ public class MP_bar extends Rectangle {
 
     public void increase(boolean hit_white_bar) {
         if (hit_white_bar) {
-            super.width += 100;
+            super.width += 200;
         } else {
-            super.width += 10;
+            super.width += 50;
         }
         if (super.width >= 500) {
             super.width = 500;
