@@ -6,9 +6,11 @@ public class Paddle extends Rectangle {
 	int id;
 	int yVelocity;
 	int speed = 10;
+	int white_bar_HEIGHT;
 
-	Paddle(int x, int y, int PADDLE_WIDTH, int PADDLE_HEIGHT, int id) {
+	Paddle(int x, int y, int PADDLE_WIDTH, int PADDLE_HEIGHT, int WHITE_BAR_HEIGHT, int id) {
 		super(x, y, PADDLE_WIDTH, PADDLE_HEIGHT);
+		white_bar_HEIGHT = WHITE_BAR_HEIGHT;
 		this.id = id;
 	}
 
@@ -70,6 +72,6 @@ public class Paddle extends Rectangle {
 		g.fillRect(x, y, width, height);
 		// white
 		g.setColor(Color.white);
-		g.fillRect(x, y + 40, width, height - 80);
+		g.fillRect(x, y + height / 2 - white_bar_HEIGHT / 2, width, white_bar_HEIGHT);
 	}
 }

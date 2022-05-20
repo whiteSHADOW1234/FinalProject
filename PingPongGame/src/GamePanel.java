@@ -18,6 +18,10 @@ public class GamePanel extends JPanel implements Runnable {
 	static final int BALL_DIAMETER = 20;
 	static final int PADDLE_WIDTH = 25;
 	static final int PADDLE_HEIGHT = 100;
+	static final int MP_bar_WIDTH = 0;
+	static final int MP_bar_HEIGHT = 20;
+	static final int white_bar_HEIGHT = 20;
+
 	Thread gameThread;
 	Image image;
 	Graphics graphics;
@@ -25,12 +29,15 @@ public class GamePanel extends JPanel implements Runnable {
 	Paddle paddle1;
 	Paddle paddle2;
 	Ball ball;
+	MP_bar mp_bar_1;
+	MP_bar mp_bar_2;
 	Score score;
 
 
 	GamePanel() {
 		newPaddles();
 		newBall();
+		newMP_bar();
 		score = new Score(GAME_WIDTH, GAME_HEIGHT);
 		this.setFocusable(true);
 		this.addKeyListener(new AL());
@@ -47,9 +54,15 @@ public class GamePanel extends JPanel implements Runnable {
 	}
 
 	public void newPaddles() {
-		paddle1 = new Paddle(0, (GAME_HEIGHT / 2) - (PADDLE_HEIGHT / 2), PADDLE_WIDTH, PADDLE_HEIGHT, 1);
+		paddle1 = new Paddle(0, (GAME_HEIGHT / 2) - (PADDLE_HEIGHT / 2), PADDLE_WIDTH, PADDLE_HEIGHT, white_bar_HEIGHT,
+				1);
 		paddle2 = new Paddle(GAME_WIDTH - PADDLE_WIDTH, (GAME_HEIGHT / 2) - (PADDLE_HEIGHT / 2), PADDLE_WIDTH,
-				PADDLE_HEIGHT, 2);
+				PADDLE_HEIGHT, white_bar_HEIGHT, 2);
+	}
+
+	public void newMP_bar() {
+		mp_bar_1 = new MP_bar(0, 0, MP_bar_WIDTH, MP_bar_HEIGHT, 1);
+		mp_bar_2 = new MP_bar((GAME_WIDTH / 2), 0, MP_bar_WIDTH, MP_bar_HEIGHT, 2);
 	}
 
 	public void paint(Graphics g) {
@@ -63,6 +76,8 @@ public class GamePanel extends JPanel implements Runnable {
 		paddle1.draw(g);
 		paddle2.draw(g);
 		ball.draw(g);
+		mp_bar_1.draw(g);
+		mp_bar_2.draw(g);
 		score.draw(g);
 		Toolkit.getDefaultToolkit().sync(); // I forgot to add this line of code in the video, it helps with the
 											// animation
@@ -78,6 +93,7 @@ public class GamePanel extends JPanel implements Runnable {
 	public void checkCollision() {
 
 		// bounce ball off top & bottom window edges
+		int ball_pos = ball.y + (ball.height / 2);
 		if (ball.y <= 0) {
 			ball.setYDirection(-ball.yVelocity);
 		}
@@ -94,6 +110,9 @@ public class GamePanel extends JPanel implements Runnable {
 				ball.yVelocity--;
 			ball.setXDirection(ball.xVelocity);
 			ball.setYDirection(ball.yVelocity);
+
+			mp_bar_1.increase(ball_pos <= paddle1.y + paddle1.height / 2 + white_bar_HEIGHT / 2
+					&& ball_pos >= paddle1.y + paddle1.height / 2 - white_bar_HEIGHT / 2);
 		}
 		if (ball.intersects(paddle2)) {
 			ball.xVelocity = Math.abs(ball.xVelocity);
@@ -104,6 +123,8 @@ public class GamePanel extends JPanel implements Runnable {
 				ball.yVelocity--;
 			ball.setXDirection(-ball.xVelocity);
 			ball.setYDirection(ball.yVelocity);
+			mp_bar_2.increase(ball_pos <= paddle2.y + paddle2.height / 2 + white_bar_HEIGHT / 2
+					&& ball_pos >= paddle2.y + paddle2.height / 2 - white_bar_HEIGHT / 2);
 		}
 		// stops paddles at window edges
 		if (paddle1.y <= 0)
