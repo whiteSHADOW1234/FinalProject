@@ -3,6 +3,13 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 
+import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.paint.PhongMaterial;
+import javafx.stage.Stage;
+
 public class GamePanel extends JPanel implements Runnable {
 
 	static final int GAME_WIDTH = 1000;
@@ -19,6 +26,7 @@ public class GamePanel extends JPanel implements Runnable {
 	Paddle paddle2;
 	Ball ball;
 	Score score;
+
 
 	GamePanel() {
 		newPaddles();
@@ -137,7 +145,29 @@ public class GamePanel extends JPanel implements Runnable {
 				repaint();
 				delta--;
 			}
+			if (score.player1 == 2 || score.player2 == 2)
+			{
+				
+				// System.exit(0);
+				break;
+			}
+			// Stage stage = new Stage();
+			// try 
+			// {
+			// 	Parent root = FXMLLoader.load(getClass().getResource("final_project_endpage.fxml"));
+	
+			// 	Scene background = new Scene(root);
+			// 	stage.setTitle("Greedy Snake");
+			// 	stage.setScene(background);
+			// 	stage.show();
+	
+			// } catch (Exception e) {
+			// 	e.printStackTrace();
+			// }
 		}
+
+
+
 	}
 
 	public class AL extends KeyAdapter {

@@ -20,7 +20,8 @@ public class PongGame extends Application {
     }
 
     public void start(Stage stage) {
-        try {
+        try 
+        {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_startpage.fxml"));
 
             Scene background = new Scene(root);
@@ -33,6 +34,7 @@ public class PongGame extends Application {
         }
     }
 
+    
     public static void main(String[] args) {
         // GameFrame frame = new GameFrame();
         // new GameFrame();
