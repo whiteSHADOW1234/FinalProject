@@ -20,7 +20,7 @@ public class GamePanel extends JPanel implements Runnable {
 	static final int PADDLE_HEIGHT = 100;
 	static final int MP_bar_WIDTH = 0;
 	static final int MP_bar_HEIGHT = 20;
-	static final int white_bar_HEIGHT = 20;
+	static final int white_bar_HEIGHT = 50;
 
 	Thread gameThread;
 	Image image;
