@@ -33,6 +33,7 @@ public class GamePanel extends JPanel implements Runnable {
 	MP_bar mp_bar_2;
 	Score score;
 
+	boolean keep_going = true;
 
 	GamePanel() {
 		newPaddles();
@@ -150,13 +151,23 @@ public class GamePanel extends JPanel implements Runnable {
 		}
 	}
 
+	public boolean GG(){
+		if (score.player1 == 2 || score.player2 == 2) {
+			keep_going = false;
+			return true;
+			// System.exit(0);
+		}
+		else 
+			return false;
+	}
+
 	public void run() {
 		// game loop
 		long lastTime = System.nanoTime();
 		double amountOfTicks = 60.0;
 		double ns = 1000000000 / amountOfTicks;
 		double delta = 0;
-		while (true) {
+		while (keep_going) {
 			long now = System.nanoTime();
 			delta += (now - lastTime) / ns;
 			lastTime = now;
@@ -166,28 +177,8 @@ public class GamePanel extends JPanel implements Runnable {
 				repaint();
 				delta--;
 			}
-			if (score.player1 == 2 || score.player2 == 2)
-			{
-				
-				// System.exit(0);
-				break;
-			}
-			// Stage stage = new Stage();
-			// try 
-			// {
-			// 	Parent root = FXMLLoader.load(getClass().getResource("final_project_endpage.fxml"));
-	
-			// 	Scene background = new Scene(root);
-			// 	stage.setTitle("Greedy Snake");
-			// 	stage.setScene(background);
-			// 	stage.show();
-	
-			// } catch (Exception e) {
-			// 	e.printStackTrace();
-			// }
+			
 		}
-
-
 
 	}
 

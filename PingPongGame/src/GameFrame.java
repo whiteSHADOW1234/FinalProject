@@ -16,4 +16,27 @@ public class GameFrame extends JFrame {
 		this.setVisible(true);
 		this.setLocationRelativeTo(null);
 	}
+
+	public void check_if_GG() {
+		long lastTime = System.nanoTime();
+		double amountOfTicks = 30.0;
+		double ns = 1000000000 / amountOfTicks;
+		double delta = 0;
+		while (true) {
+			long now = System.nanoTime();
+			delta += (now - lastTime) / ns;
+			lastTime = now;
+			if (delta >= 1) {
+				
+				if(panel.GG())
+				{
+					break;
+				}
+				delta--;
+			}
+		}
+		System.out.println("GG");
+		this.dispose();
+	}
+
 }

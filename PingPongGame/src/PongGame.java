@@ -13,10 +13,40 @@ public class PongGame extends Application {
     private Button start;
 
     @FXML
+    private Button quit;
+
+    @FXML
+    private Button restart;
+
+    @FXML
+    void Quit(ActionEvent event) {
+        System.exit(0);
+    }
+
+    @FXML
+    void restart(ActionEvent event) {
+
+    }
+
+    @FXML
     void startgame(ActionEvent event) {
         Stage stage = (Stage)start.getScene().getWindow();
         stage.close();
-        new GameFrame();
+        GameFrame GF = new GameFrame();
+        GF.check_if_GG();
+        try 
+        {
+            Parent root = FXMLLoader.load(getClass().getResource("final_project_endpage.fxml"));
+
+            Scene background = new Scene(root);
+            stage.setTitle("Greedy Snake");
+            stage.setScene(background);
+            stage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void start(Stage stage) {
