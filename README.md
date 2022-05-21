@@ -9,6 +9,17 @@ in the java configuration
 and it looks like this
 ![](https://i.imgur.com/sfXtJg8.png)
 
+2. need to download this configuration
+
+![](https://i.imgur.com/YY2UGRA.png)
+
+here is the URL:
+https://jar-download.com/artifacts/com.googlecode.soundlibs/jlayer/1.0.1.4/source-code
+
+![](https://i.imgur.com/7xCGvRb.png)
+put it in the refer lib plz
+
+
 
 更新日誌：
 * 05.20.15:58 GamePanel 第37行的beta設為真時，魔力值預設全滿，白色區域全滿

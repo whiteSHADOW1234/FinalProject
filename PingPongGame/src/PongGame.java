@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 public class PongGame extends Application {
     static int temp;
     static int restart_press = 0;
+    SongPlayer DJ = new SongPlayer();
 
     @FXML
     private Button start;
@@ -55,12 +56,12 @@ public class PongGame extends Application {
     @FXML
     void restart(ActionEvent event) {
         // if (restart_press == 0) {
-        //     win_display();
-        //     restart.setText("restart");
-        //     restart_press++;
+        // win_display();
+        // restart.setText("restart");
+        // restart_press++;
         // } else if (restart_press >= 1) {
-        //     restart_press = 0;
-        //     playwindow();
+        // restart_press = 0;
+        // playwindow();
         // }
 
         playwindow();
@@ -104,6 +105,7 @@ public class PongGame extends Application {
     }
 
     public void start(Stage stage) {
+        DJ.start();
         try {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_startpage.fxml"));
 
