@@ -84,7 +84,7 @@ public class PongGame extends Application {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_endpage.fxml"));
 
             Scene background = new Scene(root);
-            stage.setTitle("Greedy Snake");
+            stage.setTitle("Pong Game");
             stage.setScene(background);
             stage.show();
         } catch (Exception e) {
@@ -98,7 +98,7 @@ public class PongGame extends Application {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_startpage.fxml"));
 
             Scene background = new Scene(root);
-            stage.setTitle("Greedy Snake");
+            stage.setTitle("Pong Game");
             stage.setScene(background);
             stage.show();
 
