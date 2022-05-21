@@ -27,7 +27,7 @@ public class GamePanel extends JPanel implements Runnable {
 	Score score;
 
 	boolean keep_going = true;
-	boolean beta = true; // only for testing
+	boolean beta = false; // only for testing
 	long now;
 
 	GamePanel() {
@@ -153,17 +153,9 @@ public class GamePanel extends JPanel implements Runnable {
 	public int GG() {
 		if (score.player1 == 2) {
 			keep_going = false;
-
-			// score.player1 = 0;
-			// score.player2 = 0;
 			return 1;
-
 		} else if (score.player2 == 2) {
 			keep_going = false;
-
-			// score.player1 = 0;
-			// score.player2 = 0;
-
 			return 2;
 		} else
 			return 0;

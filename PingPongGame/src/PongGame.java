@@ -10,7 +10,6 @@ import javafx.stage.Stage;
 
 public class PongGame extends Application {
     static int temp;
-    static int restart_press = 0;
     SongPlayer DJ = new SongPlayer();
 
     @FXML
@@ -55,15 +54,6 @@ public class PongGame extends Application {
 
     @FXML
     void restart(ActionEvent event) {
-        // if (restart_press == 0) {
-        // win_display();
-        // restart.setText("restart");
-        // restart_press++;
-        // } else if (restart_press >= 1) {
-        // restart_press = 0;
-        // playwindow();
-        // }
-
         playwindow();
     }
 
@@ -87,8 +77,6 @@ public class PongGame extends Application {
         PongGame.temp = GF.check_if_GG();
 
         end_page_starter(stage);
-        // win_display();
-
     }
 
     public void end_page_starter(Stage stage) {
@@ -126,12 +114,9 @@ public class PongGame extends Application {
         PongGame.temp = GF.check_if_GG();
 
         end_page_starter(stage);
-        // win_display();
-
     }
 
     public static void main(String[] args) {
-
         launch();
     }
 
