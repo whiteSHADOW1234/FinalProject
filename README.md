@@ -1,19 +1,19 @@
 # FinalProject
-1. Add the configuration sentence 
+1. Add the configuration sentence in the java configuration
 
 ```
 "vmArgs": "--module-path /Users/<user>/Downloads/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml",
 ```
 
-in the java configuration
-and it looks like this
+
+ # java configuration must looks like this
 ![](https://i.imgur.com/sfXtJg8.png)
 
 2. Do not forget to download this configuration
 
 ![](https://i.imgur.com/YY2UGRA.png)
 
-Here is the URL:
+ # Here is the URL:
 https://jar-download.com/artifacts/com.googlecode.soundlibs/jlayer/1.0.1.4/source-code
 
 ![](https://i.imgur.com/7xCGvRb.png)
