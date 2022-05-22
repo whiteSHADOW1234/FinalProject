@@ -6,7 +6,7 @@
 ```
 
 
- * Java configuration must looks like this
+ * Java configuration should looks like this
 ![](https://i.imgur.com/sfXtJg8.png)
 
 2. Do not forget to download this configuration
