@@ -6,14 +6,14 @@
 ```
 
 
- # java configuration must looks like this
+ * java configuration must looks like this
 ![](https://i.imgur.com/sfXtJg8.png)
 
 2. Do not forget to download this configuration
 
 ![](https://i.imgur.com/YY2UGRA.png)
 
- # Here is the URL:
+ * Here is the URL:
 https://jar-download.com/artifacts/com.googlecode.soundlibs/jlayer/1.0.1.4/source-code
 
 ![](https://i.imgur.com/7xCGvRb.png)
