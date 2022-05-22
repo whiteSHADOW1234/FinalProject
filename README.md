@@ -1,5 +1,5 @@
 # FinalProject
-1. have to add the configuration sentence 
+1. Add the configuration sentence 
 
 ```
 "vmArgs": "--module-path /Users/<user>/Downloads/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml",
@@ -9,15 +9,15 @@ in the java configuration
 and it looks like this
 ![](https://i.imgur.com/sfXtJg8.png)
 
-2. need to download this configuration
+2. Do not forget to download this configuration
 
 ![](https://i.imgur.com/YY2UGRA.png)
 
-here is the URL:
+Here is the URL:
 https://jar-download.com/artifacts/com.googlecode.soundlibs/jlayer/1.0.1.4/source-code
 
 ![](https://i.imgur.com/7xCGvRb.png)
-put it in the refer lib plz
+Put it in the refer lib plz
 
 
 
