@@ -6,7 +6,7 @@
 ```
 
 
- * java configuration must looks like this
+ * Java configuration must looks like this
 ![](https://i.imgur.com/sfXtJg8.png)
 
 2. Do not forget to download this configuration
@@ -16,8 +16,9 @@
  * Here is the URL:
 https://jar-download.com/artifacts/com.googlecode.soundlibs/jlayer/1.0.1.4/source-code
 
+ Put it in the refer lib plz
 ![](https://i.imgur.com/7xCGvRb.png)
-Put it in the refer lib plz
+
 
 
 
