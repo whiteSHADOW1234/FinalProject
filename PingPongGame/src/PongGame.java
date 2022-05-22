@@ -1,4 +1,7 @@
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +10,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+
+import javafx.scene.control.Slider;
+import javafx.scene.input.MouseEvent;
 
 public class PongGame extends Application {
     static int temp;
@@ -28,8 +34,43 @@ public class PongGame extends Application {
     private Label situation;
 
     @FXML
-    void Setting(ActionEvent event) {
+    private Button setting_back;
 
+    @FXML
+    private Label volume;
+
+    @FXML
+    private Slider volumecontroller;
+
+    @FXML
+    void Setting_Back(ActionEvent event) {
+        Stage SETTING = (Stage) setting_back.getScene().getWindow();
+        SETTING.close();
+    }
+
+    @FXML
+    void adjust_volume(MouseEvent event) {
+
+    }
+
+
+
+
+
+
+    @FXML
+    void Setting(ActionEvent event) {
+        Stage SETTING = new Stage();
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("final_project_settingpage.fxml"));
+
+            Scene background = new Scene(root);
+            SETTING.setTitle("Pong Game Setting");
+            SETTING.setScene(background);
+            SETTING.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
