@@ -59,10 +59,15 @@ and you will probably see two buttons on the start screen.
 You will enter the setting mode and you could change the playing music's volume.
 ##### After pushing the Game start button:
 There is one ball which pops up and bounce between the up and down edges of game window and paddles.
+
 Players should move the paddles by pressing W/S(up/down) keys to avoid the ball touches the edge behind them.
+
 Every time the ball touches one's paddle, the energy bar of one's side will be added.
+
 *Secret: If the ball hits the white parts of your paddle, your energy bar will be added some extra points*
+
 Player could hit the right/left arrow key to change the ball's direction while the energy bar of his/her side was filled.
+
 Try to get two points first and you will win this game, good luck.
 
 
@@ -79,6 +84,7 @@ Not available yet......(The Game Developers are stil playing online games...)
 
 ## Beta Mode 
 :warning: You Should Not See This If You Aren't The Game Developer!!!:warning:
+
 *If you change the boolean value "beta" on the 30th line of GamePanel.java to true you will enter to the greatest mode of this game......* 
 ### Greatest Mode ------
 You will have full-white paddles and some super power ~
