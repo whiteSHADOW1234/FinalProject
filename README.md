@@ -33,6 +33,7 @@ https://jar-download.com/artifacts/com.googlecode.soundlibs/jlayer/1.0.1.4/sourc
 ![](https://i.imgur.com/7xCGvRb.png)
 
 #### 4. Find a friend to play this game with you ~
+Or you can just play this game with your hands if you don't have friends...
 
 ## Game Setting Mode
 + Control the volume of the music
@@ -72,11 +73,13 @@ Try to get two points first and you will win this game, good luck.
 
 
 ## Advance Mode ------
-Not available yet......(The Game Developers are playing online games now)
+Not available yet......
+(The Game Developers are playing online games now)
 
 
 ## Super Mode ------
-Not available yet......(The Game Developers are stil playing online games...)
+Not available yet......
+(The Game Developers are stil playing online games...)
 
 
 
@@ -86,7 +89,7 @@ Not available yet......(The Game Developers are stil playing online games...)
 :warning: You Should Not See This If You Aren't The Game Developer!!!:warning:
 
 *If you change the boolean value "beta" on the 30th line of GamePanel.java to true you will enter to the greatest mode of this game......* 
-### Greatest Mode ------
+### The Greatest Mode ------
 You will have full-white paddles and some super power ~
 
 
