@@ -27,7 +27,7 @@ public class GamePanel extends JPanel implements Runnable {
 	Score score;
 
 	boolean keep_going = true;
-	boolean beta = true; // only for testing
+	boolean beta = false; // only for testing
 	long now;
 
 	GamePanel() {

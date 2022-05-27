@@ -5,7 +5,7 @@
 
 
 
-#### 2. Install Java in Vsode 
+#### 2. Install Java in Vscode 
 
 
 
