@@ -26,7 +26,13 @@ public class GameModeController {
 
     @FXML
     void to_pve_game(ActionEvent event) {
+        Stage stage = (Stage) normal_mode.getScene().getWindow();
+        stage.close();
+        // GameFrame GF = new GameFrame();
+        GameFrame_PVE GF = new GameFrame_PVE();
+        PongGame.currentvolume = GF.check_if_GG();
 
+        start_play.end_page_starter(stage);
     }
 
 }
