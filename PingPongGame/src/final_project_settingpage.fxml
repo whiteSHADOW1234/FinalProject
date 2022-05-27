@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PongGame">
    <children>
       <ImageView fitHeight="458.0" fitWidth="809.0" layoutX="-91.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true">
@@ -17,7 +16,7 @@
          </image>
       </ImageView>
       <Slider fx:id="volumecontroller" layoutX="192.0" layoutY="172.0" onDragDetected="#adjust_volume" prefHeight="42.0" prefWidth="181.0" value="50.0" />
-      <Label fx:id="volume" layoutX="409.0" layoutY="173.0" text="目前音量" textFill="#c9c728">
+      <Label fx:id="volume" layoutX="409.0" layoutY="173.0" text="50" textFill="#c9c728">
          <font>
             <Font size="30.0" />
          </font>
@@ -27,5 +26,6 @@
             <Font size="21.0" />
          </font>
       </Button>
+      <Button fx:id="mute" layoutX="89.0" layoutY="234.0" mnemonicParsing="false" onAction="#MUTE" text="Mute" textFill="#100e0e" />
    </children>
 </AnchorPane>

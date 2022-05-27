@@ -25,6 +25,9 @@ public class PongGame extends Application implements Initializable {
     SongPlayer DJ = new SongPlayer();
 
     @FXML
+    private Button mute;
+
+    @FXML
     private Button start;
 
     @FXML
@@ -49,6 +52,12 @@ public class PongGame extends Application implements Initializable {
     private Slider volumecontroller;
 
     @FXML
+    void MUTE(ActionEvent event) {
+        //close music
+        volumecontroller.setValue(0);
+    }
+
+    @FXML
     void Setting_Back(ActionEvent event) {
         Stage SETTING = (Stage) setting_back.getScene().getWindow();
         SETTING.close();
@@ -56,7 +65,9 @@ public class PongGame extends Application implements Initializable {
 
     @FXML
     void adjust_volume(MouseEvent event) {
-
+        //convert volumecontroller.getValue() to int
+        // temp = (int) (volumecontroller.getValue());
+        // volume.setText(Integer.toString(temp));
     }
 
     @FXML
@@ -102,9 +113,11 @@ public class PongGame extends Application implements Initializable {
 
                 @Override
                 public void changed(ObservableValue<? extends Number> arg0, Number arg1, Number arg2) {
-
+                    temp = (int) (volumecontroller.getValue());
+                    volume.setText(Integer.toString(temp));
                     DJ.setVolume(volumecontroller.getValue() * 0.01);
-                }
+
+                }	
             });
         }catch (Exception e){
             System.out.println(e.getMessage());
