@@ -64,6 +64,15 @@ public class Paddle extends Rectangle {
 		y = y + yVelocity;
 	}
 
+	public void move(int ball_y){
+		if(ball_y > y + height / 2){
+			y = y + yVelocity;
+		}
+		else if(ball_y < y - height / 2){
+			y = y - height / 2;
+		}
+	}
+
 	public void draw(Graphics g) {
 		if (id == 1)
 			g.setColor(Color.blue);
