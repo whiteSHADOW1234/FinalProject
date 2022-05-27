@@ -21,7 +21,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
 
 public class PongGame extends Application implements Initializable {
-    static int temp = 50;
+    static int currentvolume = 50;
     SongPlayer DJ = new SongPlayer();
     
 
@@ -97,14 +97,14 @@ public class PongGame extends Application implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         try {
-            if (PongGame.temp == 1) {
+            if (PongGame.currentvolume == 1) {
                 System.out.println("blue");
                 situation.setText("藍方獲勝");
-            } else if (PongGame.temp == 2) {
+            } else if (PongGame.currentvolume == 2) {
                 System.out.println("red");
                 situation.setText("紅方獲勝");
             } else {
-                situation.setText("Error " + PongGame.temp);
+                situation.setText("Error " + PongGame.currentvolume);
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -117,8 +117,8 @@ public class PongGame extends Application implements Initializable {
 
                 @Override
                 public void changed(ObservableValue<? extends Number> arg0, Number arg1, Number arg2) {
-                    temp = (int) (volumecontroller.getValue());
-                    volume.setText(Integer.toString(temp));
+                    currentvolume = (int) (volumecontroller.getValue());
+                    volume.setText(Integer.toString(currentvolume));
                     DJ.setVolume(volumecontroller.getValue() * 0.01);
 
                 }	
@@ -128,8 +128,8 @@ public class PongGame extends Application implements Initializable {
         }
 
         try{
-            volume.setText(Integer.toString(temp));
-            volumecontroller.setValue(temp);
+            volume.setText(Integer.toString(currentvolume));
+            volumecontroller.setValue(currentvolume);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
@@ -141,14 +141,14 @@ public class PongGame extends Application implements Initializable {
     }
 
     public void win_display() {
-        if (PongGame.temp == 1) {
+        if (PongGame.currentvolume == 1) {
             System.out.println("blue");
             situation.setText("藍方獲勝");
-        } else if (PongGame.temp == 2) {
+        } else if (PongGame.currentvolume == 2) {
             System.out.println("red");
             situation.setText("紅方獲勝");
         } else {
-            situation.setText("Error " + PongGame.temp);
+            situation.setText("Error " + PongGame.currentvolume);
         }
     }
 
@@ -158,7 +158,7 @@ public class PongGame extends Application implements Initializable {
         stage.close();
         GameFrame GF = new GameFrame();
         // GameFrame_PVE GF = new GameFrame_PVE();
-        PongGame.temp = GF.check_if_GG();
+        PongGame.currentvolume = GF.check_if_GG();
 
         end_page_starter(stage);
     }
@@ -195,7 +195,7 @@ public class PongGame extends Application implements Initializable {
         Stage stage = (Stage) restart.getScene().getWindow();
         stage.close();
         GameFrame GF = new GameFrame();
-        PongGame.temp = GF.check_if_GG();
+        PongGame.currentvolume = GF.check_if_GG();
 
         end_page_starter(stage);
     }
