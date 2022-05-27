@@ -64,13 +64,15 @@ public class Paddle extends Rectangle {
 		y = y + yVelocity;
 	}
 
-	public void move(int ball_y){
-		if(ball_y > y + height / 2){
-			y = y + yVelocity;
+	public void move(int ball_y, int ball_diameter) {
+		if (ball_y + ball_diameter / 2 > y + height / 2) {
+			setYDirection(speed);
+		} else if (ball_y + ball_diameter / 2 < y + height / 2) {
+			setYDirection(-speed);
+		} else {
+			setYDirection(0);
 		}
-		else if(ball_y < y - height / 2){
-			y = y - height / 2;
-		}
+		move();
 	}
 
 	public void draw(Graphics g) {
