@@ -18,6 +18,9 @@ public class MP_bar extends Rectangle {
             super.width = 500;
         }
     }
+    public void move(int screee){
+        x=screee-width;
+    }
 
     public void draw(Graphics g) {
         if (id == 1)
