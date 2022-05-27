@@ -23,6 +23,7 @@ import javafx.scene.input.MouseEvent;
 public class PongGame extends Application implements Initializable {
     static int temp;
     SongPlayer DJ = new SongPlayer();
+    
 
     @FXML
     private Button mute;
@@ -50,7 +51,7 @@ public class PongGame extends Application implements Initializable {
 
     @FXML
     private Slider volumecontroller;
-
+    
     @FXML
     void MUTE(ActionEvent event) {
         //close music
@@ -65,6 +66,7 @@ public class PongGame extends Application implements Initializable {
 
     @FXML
     void adjust_volume(MouseEvent event) {
+        
         //convert volumecontroller.getValue() to int
         // temp = (int) (volumecontroller.getValue());
         // volume.setText(Integer.toString(temp));
@@ -72,6 +74,8 @@ public class PongGame extends Application implements Initializable {
 
     @FXML
     void Setting(ActionEvent event) {
+        
+
         Stage SETTING = new Stage();
         try {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_settingpage.fxml"));
