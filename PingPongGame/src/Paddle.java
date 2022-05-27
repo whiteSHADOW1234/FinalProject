@@ -6,7 +6,7 @@ public class Paddle extends Rectangle {
 	int id;
 	int yVelocity;
 	int speed = 10;
-	int machine_speed = 5;
+	int machine_speed = 10;
 	int white_bar_HEIGHT;
 
 	Paddle(int x, int y, int PADDLE_WIDTH, int PADDLE_HEIGHT, int WHITE_BAR_HEIGHT, int id) {
@@ -69,8 +69,8 @@ public class Paddle extends Rectangle {
 		if(ball_velocity<0){
 			ball_velocity *= -1;
 		}
-		if(ball_velocity >= speed ){
-			ball_velocity = speed;
+		if(ball_velocity >= machine_speed ){
+			ball_velocity = machine_speed;
 		}
 		if (ball_y + ball_diameter / 2 >= y + height / 2) {
 			setYDirection(ball_velocity);
