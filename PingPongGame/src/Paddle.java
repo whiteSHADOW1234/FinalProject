@@ -6,7 +6,7 @@ public class Paddle extends Rectangle {
 	int id;
 	int yVelocity;
 	int speed = 10;
-	int machine_speed = 10;
+	static int machine_speed = 10;
 	int white_bar_HEIGHT;
 
 	Paddle(int x, int y, int PADDLE_WIDTH, int PADDLE_HEIGHT, int WHITE_BAR_HEIGHT, int id) {

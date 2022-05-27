@@ -4,6 +4,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class GameModeController {
+    static int AI_speed = 10;
 
     PongGame start_play = new PongGame();
 
@@ -19,7 +20,7 @@ public class GameModeController {
         stage.close();
         GameFrame GF = new GameFrame();
         // GameFrame_PVE GF = new GameFrame_PVE();
-        PongGame.currentvolume = GF.check_if_GG();
+        PongGame.winner = GF.check_if_GG();
 
         start_play.end_page_starter(stage);
     }
@@ -30,7 +31,8 @@ public class GameModeController {
         stage.close();
         // GameFrame GF = new GameFrame();
         GameFrame_PVE GF = new GameFrame_PVE();
-        PongGame.currentvolume = GF.check_if_GG();
+        Paddle.machine_speed = AI_speed;
+        PongGame.winner = GF.check_if_GG();
 
         start_play.end_page_starter(stage);
     }

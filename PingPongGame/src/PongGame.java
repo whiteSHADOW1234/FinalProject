@@ -23,6 +23,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 public class PongGame extends Application implements Initializable {
+    static int winner;
     static int currentvolume = 50;
     SongPlayer DJ = new SongPlayer();
     String input_ball_speed;
@@ -33,7 +34,7 @@ public class PongGame extends Application implements Initializable {
 
     @FXML
     private TextField speedsetting;
-    
+
     @FXML
     private CheckBox customize_speed;
 
@@ -64,20 +65,20 @@ public class PongGame extends Application implements Initializable {
     @FXML
     private Slider volumecontroller;
 
-
     // 路徑問題
     @FXML
     void Confirm_Speed(ActionEvent event) {
         if (speedsetting.getText() == "") {
-            //change paddle machine_speed
+            // change paddle machine_speed
             // GF.panel.paddle2.machine_speed = 10;
+            GameModeController.AI_speed = 10;
+            // speedsetting.setText("10");
             System.out.println("NULL");
-        }
-        else
-        {
+        } else {
             System.out.println("NOT NULL");
             input_ball_speed = speedsetting.getText();
             input_ball_speed_int = Integer.parseInt(input_ball_speed);
+            GameModeController.AI_speed = input_ball_speed_int;
         }
     }
 
@@ -91,10 +92,10 @@ public class PongGame extends Application implements Initializable {
             confirm.setVisible(false);
         }
     }
-    
+
     @FXML
     void MUTE(ActionEvent event) {
-        //close music
+        // close music
         volumecontroller.setValue(0);
     }
 
@@ -106,15 +107,14 @@ public class PongGame extends Application implements Initializable {
 
     @FXML
     void adjust_volume(MouseEvent event) {
-        
-        //convert volumecontroller.getValue() to int
+
+        // convert volumecontroller.getValue() to int
         // temp = (int) (volumecontroller.getValue());
         // volume.setText(Integer.toString(temp));
     }
 
     @FXML
     void Setting(ActionEvent event) {
-        
 
         Stage SETTING = new Stage();
         try {
@@ -137,20 +137,20 @@ public class PongGame extends Application implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         try {
-            if (PongGame.currentvolume == 1) {
+            if (PongGame.winner == 1) {
                 System.out.println("blue");
                 situation.setText("藍方獲勝");
-            } else if (PongGame.currentvolume == 2) {
+            } else if (PongGame.winner == 2) {
                 System.out.println("red");
                 situation.setText("紅方獲勝");
             } else {
-                situation.setText("Error " + PongGame.currentvolume);
+                situation.setText("Error " + PongGame.winner);
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
-        try{
+        try {
             System.out.println(volumecontroller.getValue());
 
             volumecontroller.valueProperty().addListener(new ChangeListener<Number>() {
@@ -161,20 +161,25 @@ public class PongGame extends Application implements Initializable {
                     volume.setText(Integer.toString(currentvolume));
                     DJ.setVolume(volumecontroller.getValue() * 0.01);
 
-                }	
+                }
             });
-        }catch (Exception e){
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            volume.setText(Integer.toString(currentvolume));
+            volumecontroller.setValue(currentvolume);
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
         try{
-            volume.setText(Integer.toString(currentvolume));
-            volumecontroller.setValue(currentvolume);
-        }catch (Exception e){
+            GameModeController.AI_speed = 10;
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
-
 
     // 重開遊戲聲音變小
     @FXML
@@ -191,21 +196,7 @@ public class PongGame extends Application implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        // Stage gamemode_stage = (Stage) restart.getScene().getWindow();
-        // gamemode_stage.close();
-        // try {
-        //     Parent root = FXMLLoader.load(getClass().getResource("final_project_GameModepage.fxml"));
 
-        //     Scene background = new Scene(root);
-        //     gamemode_stage.setTitle("Pong Game");
-        //     gamemode_stage.setScene(background);
-        //     gamemode_stage.show();
-        // } catch (Exception e) {
-        //     e.printStackTrace();
-        // }
-
-
-        // playwindow();
     }
 
     public void win_display() {
@@ -233,7 +224,6 @@ public class PongGame extends Application implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 
         // Stage stage = (Stage) start.getScene().getWindow();
         // stage.close();

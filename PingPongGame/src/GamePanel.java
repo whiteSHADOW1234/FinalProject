@@ -199,8 +199,8 @@ public class GamePanel extends JPanel implements Runnable {
 		}
 		if (beta) {
 			ball.xVelocity *= 1000;
-			mp_bar_2.width += 500;
-			mp_bar_1.width += 500;
+			mp_bar_2.width = 500;
+			mp_bar_1.width = 500;
 		}
 
 	}
