@@ -154,13 +154,26 @@ public class PongGame extends Application implements Initializable {
 
     @FXML
     void startgame(ActionEvent event) {
-        Stage stage = (Stage) start.getScene().getWindow();
-        stage.close();
-        GameFrame GF = new GameFrame();
-        // GameFrame_PVE GF = new GameFrame_PVE();
-        PongGame.currentvolume = GF.check_if_GG();
+        Stage gamemode_stage = (Stage) start.getScene().getWindow();
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("final_project_GameModepage.fxml"));
 
-        end_page_starter(stage);
+            Scene background = new Scene(root);
+            gamemode_stage.setTitle("Pong Game");
+            gamemode_stage.setScene(background);
+            gamemode_stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        // Stage stage = (Stage) start.getScene().getWindow();
+        // stage.close();
+        // GameFrame GF = new GameFrame();
+        // // GameFrame_PVE GF = new GameFrame_PVE();
+        // PongGame.currentvolume = GF.check_if_GG();
+
+        // end_page_starter(stage);
     }
 
     public void end_page_starter(Stage stage) {
