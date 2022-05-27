@@ -14,16 +14,28 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 public class PongGame extends Application implements Initializable {
     static int currentvolume = 50;
     SongPlayer DJ = new SongPlayer();
+    String input_ball_speed;
+    int input_ball_speed_int;
+
+    @FXML
+    private Button confirm;
+
+    @FXML
+    private TextField speedsetting;
     
+    @FXML
+    private CheckBox customize_speed;
 
     @FXML
     private Button mute;
@@ -51,6 +63,34 @@ public class PongGame extends Application implements Initializable {
 
     @FXML
     private Slider volumecontroller;
+
+
+    // 路徑問題
+    @FXML
+    void Confirm_Speed(ActionEvent event) {
+        if (speedsetting.getText() == "") {
+            //change paddle machine_speed
+            // GF.panel.paddle2.machine_speed = 10;
+            System.out.println("NULL");
+        }
+        else
+        {
+            System.out.println("NOT NULL");
+            input_ball_speed = speedsetting.getText();
+            input_ball_speed_int = Integer.parseInt(input_ball_speed);
+        }
+    }
+
+    @FXML
+    void customize_ball_speed(ActionEvent event) {
+        if (customize_speed.isSelected()) {
+            speedsetting.setVisible(true);
+            confirm.setVisible(true);
+        } else {
+            speedsetting.setVisible(false);
+            confirm.setVisible(false);
+        }
+    }
     
     @FXML
     void MUTE(ActionEvent event) {
@@ -135,20 +175,34 @@ public class PongGame extends Application implements Initializable {
         }
     }
 
+
+    // 重開遊戲聲音變小
     @FXML
     void restart(ActionEvent event) {
-        Stage gamemode_stage = (Stage) restart.getScene().getWindow();
-        gamemode_stage.close();
+        Stage stage = (Stage) restart.getScene().getWindow();
+        stage.close();
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("final_project_GameModepage.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("final_project_startpage.fxml"));
 
             Scene background = new Scene(root);
-            gamemode_stage.setTitle("Pong Game");
-            gamemode_stage.setScene(background);
-            gamemode_stage.show();
+            stage.setTitle("Pong Game");
+            stage.setScene(background);
+            stage.show();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        // Stage gamemode_stage = (Stage) restart.getScene().getWindow();
+        // gamemode_stage.close();
+        // try {
+        //     Parent root = FXMLLoader.load(getClass().getResource("final_project_GameModepage.fxml"));
+
+        //     Scene background = new Scene(root);
+        //     gamemode_stage.setTitle("Pong Game");
+        //     gamemode_stage.setScene(background);
+        //     gamemode_stage.show();
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
 
 
         // playwindow();
