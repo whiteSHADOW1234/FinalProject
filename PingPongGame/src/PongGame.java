@@ -132,7 +132,8 @@ public class PongGame extends Application implements Initializable {
     void startgame(ActionEvent event) {
         Stage stage = (Stage) start.getScene().getWindow();
         stage.close();
-        GameFrame GF = new GameFrame();
+        // GameFrame GF = new GameFrame();
+        GameFrame_PVE GF = new GameFrame_PVE();
         PongGame.temp = GF.check_if_GG();
 
         end_page_starter(stage);
