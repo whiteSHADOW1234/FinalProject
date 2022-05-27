@@ -21,7 +21,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
 
 public class PongGame extends Application implements Initializable {
-    static int temp;
+    static int temp = 50;
     SongPlayer DJ = new SongPlayer();
 
     @FXML
@@ -119,6 +119,13 @@ public class PongGame extends Application implements Initializable {
 
                 }	
             });
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        try{
+            volume.setText(Integer.toString(temp));
+            volumecontroller.setValue(temp);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
