@@ -79,6 +79,7 @@ public class PongGame extends Application implements Initializable {
             input_ball_speed = speedsetting.getText();
             input_ball_speed_int = Integer.parseInt(input_ball_speed);
             GameModeController.AI_speed = input_ball_speed_int;
+            
         }
     }
 
