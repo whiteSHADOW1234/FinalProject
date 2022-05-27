@@ -137,7 +137,21 @@ public class PongGame extends Application implements Initializable {
 
     @FXML
     void restart(ActionEvent event) {
-        playwindow();
+        Stage gamemode_stage = (Stage) restart.getScene().getWindow();
+        gamemode_stage.close();
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("final_project_GameModepage.fxml"));
+
+            Scene background = new Scene(root);
+            gamemode_stage.setTitle("Pong Game");
+            gamemode_stage.setScene(background);
+            gamemode_stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        // playwindow();
     }
 
     public void win_display() {
