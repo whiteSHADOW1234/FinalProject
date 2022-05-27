@@ -88,7 +88,7 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 
 	public void move() {
 		paddle1.move();
-		paddle2.move(ball.y, BALL_DIAMETER);
+		paddle2.move(ball.y, BALL_DIAMETER, ball.yVelocity);
 		ball.move();
 	}
 
