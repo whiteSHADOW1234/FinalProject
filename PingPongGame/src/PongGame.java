@@ -82,6 +82,7 @@ public class PongGame extends Application implements Initializable {
                 GameModeController.AI_speed = input_ball_speed_int;
             }
         } catch (NumberFormatException e){
+            customize_speed.setText("快滾低能兒");
             System.out.println("快滾低能兒");
         }
     }
