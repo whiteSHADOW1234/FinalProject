@@ -6,25 +6,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="277.0" prefWidth="488.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="277.0" prefWidth="488.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameModeController">
    <children>
       <ImageView fitHeight="295.0" fitWidth="491.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@GameModepage.png" />
          </image>
       </ImageView>
-      <Button layoutX="180.0" layoutY="113.0" mnemonicParsing="false" text="Normal Mode">
+      <Button fx:id="normal_mode" layoutX="180.0" layoutY="113.0" mnemonicParsing="false" onAction="#to_normal_game" text="Normal Mode">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button layoutX="180.0" layoutY="154.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="127.0" text="PVE">
+      <Button fx:id="pve" layoutX="180.0" layoutY="154.0" mnemonicParsing="false" onAction="#to_pve_game" prefHeight="33.0" prefWidth="127.0" text="PVE">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button layoutX="180.0" layoutY="197.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="127.0" text="CSGO">
+      <Button layoutX="180.0" layoutY="195.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="127.0" text="CSGO">
          <font>
             <Font size="16.0" />
          </font>
