@@ -91,7 +91,7 @@ Not available yet......
 
 *If you change the boolean value "beta" on the 30th line of GamePanel.java to true you will enter to the greatest mode of this game......* 
 ### The Greatest Mode ------
----
+------
 You will have full-white paddles and some super power ~
 
 
@@ -102,7 +102,7 @@ You will have full-white paddles and some super power ~
 
 
 
----
+------
 更新日誌：
 * 05.20.15:58 GamePanel 第37行的beta設為真時，魔力值預設全滿，白色區域全滿
 * 05.20.11:36 現在擊中paddle會增加魔力條，擊中白色區域會增加更多
