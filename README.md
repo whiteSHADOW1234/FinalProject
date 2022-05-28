@@ -79,7 +79,7 @@ Not available yet......
 
 ## Super Mode ------
 Not available yet......
-(The Game Developers are stil playing online games...)
+(The Game Developers are still playing online games...)
 
 
 
