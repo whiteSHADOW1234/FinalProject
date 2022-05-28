@@ -12,7 +12,7 @@
 
 
 
-#### 3. Install JavaFx in Vsode 
+#### 3. Install JavaFx in Vscode 
 1. Add the configuration sentence in the java configuration
 
 ```
