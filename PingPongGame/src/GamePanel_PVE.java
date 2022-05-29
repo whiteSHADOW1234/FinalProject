@@ -14,6 +14,10 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 	static int MP_bar_WIDTH = 0;
 	static final int MP_bar_HEIGHT = 20;
 	static int white_bar_HEIGHT = 50;
+	final int deviation_create_cycle = 120;
+	final int deviation_ego = 110; // machine will think it has this volume
+	final double machine_use_skill_probality_per_frame = 1.0 / 500;
+	final int reverse_probability = (int) (1.0 / machine_use_skill_probality_per_frame);
 
 	Thread gameThread;
 	Image image;
@@ -29,6 +33,9 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 	boolean keep_going = true;
 	boolean beta = false; // only for testing
 	long now;
+	Random rd;
+	int deviation;
+	int deviation_waiting_times = 0;
 
 	GamePanel_PVE() {
 		if (beta) {
@@ -52,7 +59,7 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 		ball = new Ball((GAME_WIDTH / 2) - (BALL_DIAMETER / 2), random.nextInt(GAME_HEIGHT - BALL_DIAMETER),
 				BALL_DIAMETER, BALL_DIAMETER);
 		// ball = new Ball((GAME_WIDTH / 2) - (BALL_DIAMETER / 2), 300,
-		// 		BALL_DIAMETER, BALL_DIAMETER);
+		// BALL_DIAMETER, BALL_DIAMETER);
 	}
 
 	public void newPaddles() {
@@ -87,9 +94,21 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 	}
 
 	public void move() {
+
 		paddle1.move();
-		paddle2.move(ball.y, BALL_DIAMETER, ball.yVelocity);
+
+		if (deviation_waiting_times >= deviation_create_cycle && ball.x >= GAME_WIDTH / 2) {
+			rd = new Random();
+			deviation = rd.nextInt(deviation_ego);
+			deviation_waiting_times = 0;
+			// System.out.println("deviation created: " + deviation);
+		}
+
+		if (ball.xVelocity > 0 || ball.x >= GAME_WIDTH / 2) {
+			paddle2.move(ball.y, BALL_DIAMETER, ball.xVelocity, deviation / 2);
+		}
 		ball.move();
+		deviation_waiting_times++;
 	}
 
 	public void checkCollision() {
@@ -163,6 +182,9 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 			return 0;
 	}
 
+	// input the id of the player who is trying to use skill_smash
+	// it will change the ball's speed or direction, depending on the ball's
+	// original velocity
 	public void skill_smash(int id) {
 		switch (id) {
 			case 1:
@@ -206,6 +228,18 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 
 	}
 
+	public void machine_skill() {
+		// System.out.println(reverse_probability);
+		if (mp_bar_2.width >= 500 && ball.x >= GAME_WIDTH / 2 && ball.xVelocity < 0) {
+			rd = new Random();
+			int chance = rd.nextInt(reverse_probability);
+			System.out.println(chance);
+			if (chance == 0) {
+				skill_smash(2);
+			}
+		}
+	}
+
 	public void run() {
 		// game loop
 
@@ -219,6 +253,7 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 			lastTime = now;
 			if (delta >= 1) {
 				move();
+				machine_skill();
 				checkCollision();
 				repaint();
 				delta--;
@@ -234,9 +269,10 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 			// paddle2.keyPressed(e);
 			if (e.getKeyCode() == KeyEvent.VK_D) {
 				skill_smash(1);
-			} else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-				skill_smash(2);
 			}
+			// else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+			// skill_smash(2);
+			// }
 		}
 
 		public void keyReleased(KeyEvent e) {
