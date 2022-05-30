@@ -15,6 +15,7 @@ public class GameFrame_PVE extends JFrame {
 		this.pack(); // pack the items in the panel window.
 		this.setVisible(true);
 		this.setLocationRelativeTo(null);
+		this.setResizable(false);
 	}
 
 	public int check_if_GG() {
@@ -30,8 +31,7 @@ public class GameFrame_PVE extends JFrame {
 			if (delta >= 1) {
 				// System.out.println("stuck");
 				gameend = panel.GG();
-				if(gameend == 1 || gameend == 2) 
-				{
+				if (gameend == 1 || gameend == 2) {
 					break;
 				}
 				delta--;

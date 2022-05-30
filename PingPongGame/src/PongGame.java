@@ -68,7 +68,7 @@ public class PongGame extends Application implements Initializable {
     // 路徑問題
     @FXML
     void Confirm_Speed(ActionEvent event) {
-        try{
+        try {
             if (speedsetting.getText() == "") {
                 // change paddle machine_speed
                 // GF.panel.paddle2.machine_speed = 10;
@@ -81,7 +81,7 @@ public class PongGame extends Application implements Initializable {
                 input_ball_speed_int = Integer.parseInt(input_ball_speed);
                 GameModeController.AI_speed = input_ball_speed_int;
             }
-        } catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             customize_speed.setText("快滾低能兒");
             System.out.println("快滾低能兒");
         }
@@ -179,7 +179,7 @@ public class PongGame extends Application implements Initializable {
             System.out.println(e.getMessage());
         }
 
-        try{
+        try {
             GameModeController.AI_speed = 10;
         } catch (Exception e) {
             System.out.println(e.getMessage());

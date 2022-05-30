@@ -75,9 +75,9 @@ public class GamePanel extends JPanel implements Runnable {
 	public void draw(Graphics g) {
 		paddle1.draw(g);
 		paddle2.draw(g);
-		ball.draw(g);
 		mp_bar_1.draw(g);
 		mp_bar_2.draw(g);
+		ball.draw(g);
 		score.draw(g);
 		Toolkit.getDefaultToolkit().sync(); // I forgot to add this line of code in the video, it helps with the
 											// animation

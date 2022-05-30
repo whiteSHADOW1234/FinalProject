@@ -31,7 +31,7 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 	Score score;
 
 	boolean keep_going = true;
-	boolean beta = false; // only for testing
+	boolean beta = true; // only for testing
 	long now;
 	Random rd;
 	int deviation;
@@ -40,11 +40,11 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 	GamePanel_PVE() {
 		if (beta) {
 			MP_bar_WIDTH = 500;
-			white_bar_HEIGHT = 100;
+			// white_bar_HEIGHT = 100;ddd
 		}
 		newPaddles();
-		newBall();
 		newMP_bar();
+		newBall();
 		score = new Score(GAME_WIDTH, GAME_HEIGHT);
 		this.setFocusable(true);
 		this.addKeyListener(new AL());
@@ -84,9 +84,9 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 	public void draw(Graphics g) {
 		paddle1.draw(g);
 		paddle2.draw(g);
-		ball.draw(g);
 		mp_bar_1.draw(g);
 		mp_bar_2.draw(g);
+		ball.draw(g);
 		score.draw(g);
 		Toolkit.getDefaultToolkit().sync(); // I forgot to add this line of code in the video, it helps with the
 											// animation
@@ -158,7 +158,7 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 			paddle2.y = GAME_HEIGHT - PADDLE_HEIGHT;
 		// give a player 1 point and creates new paddles & ball
 		if (ball.x <= 0) {
-			score.player2++;
+			// score.player2++;
 			newPaddles();
 			newBall();
 			System.out.println("Player 2: " + score.player2);
@@ -221,7 +221,7 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 
 		}
 		if (beta) {
-			ball.xVelocity *= 1000;
+			// ball.xVelocity *= 1000;
 			mp_bar_2.width += 500;
 			mp_bar_1.width += 500;
 		}
@@ -233,7 +233,7 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 		if (mp_bar_2.width >= 500 && ball.x >= GAME_WIDTH / 2 && ball.xVelocity < 0) {
 			rd = new Random();
 			int chance = rd.nextInt(reverse_probability);
-			System.out.println(chance);
+			// System.out.println(chance);
 			if (chance == 0) {
 				skill_smash(2);
 			}
