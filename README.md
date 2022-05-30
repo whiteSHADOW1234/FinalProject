@@ -17,7 +17,9 @@ You could try this:
 
 1. Create a file which you would run this project in and open it 
 2. Import Java's & JavaFX's JRE in the refer lib
-3. Press the "new configurations" button which is under the Run button above your window (you can copy and paste the code under __3. Install JavaFx in Vscode__ )
+3. Press the "new configurations" button which is under the Run button above your window 
+
+(you can copy and paste the code under __3. Install JavaFx in Vscode__ )
 
 
 #### 3. Install JavaFx in Vscode 
