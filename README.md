@@ -36,11 +36,70 @@ https://jar-download.com/artifacts/com.googlecode.soundlibs/jlayer/1.0.1.4/sourc
 #### 4. Find a friend to play this game with you ~
 Or you can just play this game with your hands if you don't have friends...
 
-## Game Setting Mode
-+ Control the volume of the music
+
+
+
+
+
+
+## Main Game Scene
++ Nice looking backgrounds (main scene)
++ Game Start Button
++ Setting Button
+
+### Description:
+After pressing the Game Start Button, you'll enter the Mode Selecting Page.
+
+After pressing the Setting Button, you'll enter the Game Setting Page.
+
+
+
+
+
+
+
+## Mode Selecting Page
++ Nice looking backgrounds (mode selecting scene)
++ Basic Mode Button
++ Advance Mode(PVE) Button
++ Super Mode Button (Not activated right now)
+
+### Description:
+After pressing the Basic Mode Button, you'll enter the Basic Mode.
+
+After pressing the Advance Mode(PVE) Button, you'll enter the Advance Mode(PVE).
+
+After pressing the Super Mode Button, you'll enter the Super Mode.
+
+
+
+
+
+
+
+
+
+
+## Game Setting Page
++ Volume Bar with number changing while dragging it
++ Mute Button
++ AI Speed customize Button
++ Back button
 + Nice looking backgrounds (setting scene)
 ### Description:
-Player could set the volume of the playing music by dragging the bar in the setting scene.
+Set the volume of the music by dragging the bar or pushing mute button in the setting scene.
+
+After checking the AI speed customize button,you could set the red side's speed in PVE mode.
+
+Oh, don't forget to press the confirm button!
+  *There are some secret things hidding in here...*
+  
+After customize your setting do not forget to press the Back button to confirm your changes.
+
+
+
+
+
 
 
 
@@ -68,17 +127,19 @@ Every time the ball touches one's paddle, the energy bar of one's side will be a
 
 *Secret: If the ball hits the white parts of your paddle, your energy bar will be added some extra points*
 
-Player could hit the right/left arrow key to change the ball's direction while the energy bar of his/her side was filled.
+Player could hit the D(/left arrow) key to change the ball's direction while the energy bar of his/her side was filled.
 
 Try to get two points first and you will win this game, good luck.
 
 
-## Advance Mode ------
+## Advance Mode(PVE) 
++ 
+### Description:
 Not available yet......
 (The Game Developers are playing online games now)
 
 
-## Super Mode ------
+## Super Mode 
 Not available yet......
 (The Game Developers are still playing online games...)
 
@@ -91,7 +152,6 @@ Not available yet......
 
 *If you change the boolean value "beta" on the 30th line of GamePanel.java to true you will enter to the greatest mode of this game......* 
 ### The Greatest Mode ------
-------
 You will have full-white paddles and some super power ~
 
 
