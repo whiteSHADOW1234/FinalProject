@@ -15,7 +15,7 @@ You could try this:
 
    https://code.visualstudio.com/docs/java/java-tutorial
 
-Then, create a file which you would run this project in and open it.
+Then, create a folder which you would run this project in and open it.
 
 
 

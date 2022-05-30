@@ -220,6 +220,7 @@ public class PongGame extends Application implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_startpage.fxml"));
 
             Scene background = new Scene(root);
+            background.getStylesheets().add(getClass().getResource("final_project_CSS.css").toExternalForm());
             stage.setTitle("Pong Game");
             stage.setScene(background);
             stage.show();
@@ -286,7 +287,7 @@ public class PongGame extends Application implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_startpage.fxml"));
 
             Scene background = new Scene(root);
-            //change the background color
+            // change the background color
             //
             background.getStylesheets().add(getClass().getResource("final_project_CSS.css").toExternalForm());
             //
