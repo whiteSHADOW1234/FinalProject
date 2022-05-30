@@ -1,6 +1,9 @@
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.animation.FadeTransition;
+import javafx.animation.Interpolator;
+import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -17,7 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
+import javafx.util.Duration;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -187,6 +190,25 @@ public class PongGame extends Application implements Initializable {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        // button animation
+        FadeTransition fade2 = new FadeTransition();
+        fade2.setNode(setting);
+        fade2.setDuration(Duration.seconds(1));
+        fade2.setCycleCount(1);
+        fade2.setInterpolator(Interpolator.LINEAR);
+        fade2.setFromValue(0);
+        fade2.setToValue(1);
+        fade2.play();
+
+        FadeTransition fade = new FadeTransition();
+        fade.setNode(start);
+        fade.setDuration(Duration.seconds(1));
+        fade.setCycleCount(1);
+        fade.setInterpolator(Interpolator.LINEAR);
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.play();
+
     }
 
     // 重開遊戲聲音變小
