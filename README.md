@@ -1,5 +1,7 @@
 # FinalProject - 進撃のPingPong
 
+
+
 ## Set up the environment
 #### 1. Install Vscode 
 
@@ -34,13 +36,76 @@ https://jar-download.com/artifacts/com.googlecode.soundlibs/jlayer/1.0.1.4/sourc
 ![](https://i.imgur.com/7xCGvRb.png)
 
 #### 4. Find a friend to play this game with you ~
+*RIGHT[BLUE] PLAYER* && (LEFT[RED] PLAYER)
 Or you can just play this game with your hands if you don't have friends...
 
-## Game Setting Mode
-+ Control the volume of the music
-+ Nice looking backgrounds (setting scene)
+
+
+
+
+
+
+## Main Game Scene
++ Nice looking backgrounds (main scene)
++ Game Start Button
++ Setting Button
+
 ### Description:
-Player could set the volume of the playing music by dragging the bar in the setting scene.
+This is the first screen which pops up after you run this project on your device which had finish setting up the environment.
+
+you will probably see two buttons on it.
+
+After pressing the Game Start Button, you'll enter the Mode Selecting Page.
+
+After pressing the Setting Button, you'll enter the Game Setting Page.
+
+
+
+
+
+
+
+## Mode Selecting Page
++ Nice looking backgrounds (mode selecting scene)
++ Basic Mode Button
++ Advance Mode(PVE) Button
++ Super Mode Button (Not activated right now)
+
+### Description:
+There are three buttons on this screen.
+
+After pressing the Basic Mode Button, you'll enter the Basic Mode.
+
+After pressing the Advance(PVE) Mode Button, you'll enter the Advance(PVE) Mode.
+
+After pressing the Super Mode Button, you'll enter the Super Mode.
+
+
+
+
+
+
+## Game Setting Page
++ Volume Bar with number changing while user dragging it
++ Mute Button
++ AI Speed customize Check Box with a textfield and confirm button after checking it
++ Back button
++ Nice looking backgrounds (setting scene)
+
+### Description:
+Set the volume of the music by dragging the bar or pushing mute button in the setting scene.
+
+After checking the AI speed customize button,you could set the red side's speed in PVE mode.
+
+Oh, don't forget to press the confirm button!!!
+  *There are some secret things hidding in here...*
+  
+After customize your setting do not forget to press the Back button to confirm your changes.
+
+
+
+
+
 
 
 
@@ -55,30 +120,28 @@ Player could set the volume of the playing music by dragging the bar in the sett
 + Player who gets two points first is the winner
 + Two buttons(restart & quit), a GIF and the winner will be shown on the end scene
 ### Description:
-First run this project on your device which had finish setting up the environment
-and you will probably see two buttons on the start screen.
-##### After pushing the Setting button:
-You will enter the setting mode and you could change the playing music's volume.
-##### After pushing the Game start button:
+
 There is one ball which pops up and bounce between the up and down edges of game window and paddles.
 
-Players should move the paddles by pressing W/S(up/down) keys to avoid the ball touches the edge behind them.
+Players should move the paddles by pressing *W/S*(up/down) keys to avoid the ball touches the edge behind them.
 
 Every time the ball touches one's paddle, the energy bar of one's side will be added.
 
 *Secret: If the ball hits the white parts of your paddle, your energy bar will be added some extra points*
 
-Player could hit the right/left arrow key to change the ball's direction while the energy bar of his/her side was filled.
+Player could hit the D(/left arrow) key to change the ball's direction while the energy bar of his/her side was filled.
 
 Try to get two points first and you will win this game, good luck.
 
 
-## Advance Mode ------
+## Advance Mode(PVE) 
++ 
+### Description:
 Not available yet......
 (The Game Developers are playing online games now)
 
 
-## Super Mode ------
+## Super Mode 
 Not available yet......
 (The Game Developers are still playing online games...)
 
@@ -91,7 +154,6 @@ Not available yet......
 
 *If you change the boolean value "beta" on the 30th line of GamePanel.java to true you will enter to the greatest mode of this game......* 
 ### The Greatest Mode ------
-------
 You will have full-white paddles and some super power ~
 
 
