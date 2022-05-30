@@ -13,14 +13,14 @@
             <Image url="@bbbb.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="start" layoutX="258.0" layoutY="201.0" mnemonicParsing="false" onAction="#startgame" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: violet;" text="Game Start">
+      <Button fx:id="start" layoutX="233.0" layoutY="201.0" mnemonicParsing="false" onAction="#startgame" prefHeight="41.0" prefWidth="159.0" text="Game Start" textFill="WHITE">
          <font>
-            <Font name="ROGFonts-Regular" size="12.0" />
+            <Font name="Rockwell Extra Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="setting" layoutX="258.0" layoutY="252.0" mnemonicParsing="false" onAction="#Setting" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: violet;" text="Setting" textFill="#210404">
+      <Button fx:id="setting" layoutX="233.0" layoutY="265.0" mnemonicParsing="false" onAction="#Setting" prefHeight="41.0" prefWidth="159.0" text="Setting" textFill="WHITE">
          <font>
-            <Font name="ROGFonts-Regular" size="12.0" />
+            <Font name="Rockwell Extra Bold" size="20.0" />
          </font>
       </Button>
    </children>

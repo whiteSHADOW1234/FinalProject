@@ -1,0 +1,19 @@
+#mute{
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #0000004a, #fffffffa);
+}
+
+#setting_back{
+    -fx-background-color: linear-gradient(#53c15e, #00ffc81c);
+}
+#start{
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #780090, #d400ff41);
+}
+#setting{
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #780090, #d400ff41);
+}
+#normal_mode{
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #00fffb, #50fc00af);
+}
+#pve{
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #00fffb, #50fc00af);
+}
