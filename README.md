@@ -4,6 +4,8 @@
 
 ## Set up the environment
 #### 1. Install Vscode 
+Hmmm, I think you know how to do this right ?
+So I'm not going to write this,wa ha ha ha.
 
 
 
@@ -36,19 +38,21 @@ https://jar-download.com/artifacts/com.googlecode.soundlibs/jlayer/1.0.1.4/sourc
 ![](https://i.imgur.com/7xCGvRb.png)
 
 #### 4. Find a friend to play this game with you ~
-*RIGHT[BLUE] PLAYER* && (LEFT[RED] PLAYER)
-Or you can just play this game with your hands if you don't have friends...
+
+Or you can just play this game with your hands(/the computer) if you don't have any friends...
+
+I will use this type of words to represent *RIGHT[BLUE] PLAYER* .
+And use this type of words to represent (LEFT[RED] PLAYER).
 
 
 
 
 
-
-
-## Main Game Scene
+## Game Starting Scene
 + Nice looking backgrounds (main scene)
 + Game Start Button
 + Setting Button
++ Enable to play the music while playing this game
 
 ### Description:
 This is the first screen which pops up after you run this project on your device which had finish setting up the environment.
@@ -106,19 +110,40 @@ After customize your setting do not forget to press the Back button to confirm y
 
 
 
+## End Scene
++ Nice looking backgrounds (ending scene)
++ Great firework GIF
++ Restart button
++ Quit button
++ Winner will be shown on this scene
+
+### Description:
+PLayers could see who's the winner in this game on this page.
+
+After you press the Restart button, you will jump to the Game Starting Scene.
+
+After you press the Quit button, you will quit this game.
+
+
+
+
+
+
+
+
+
+
 
 
 
 ## Basic Mode 
-+ Nice looking backgrounds (includes start scene, game scene and the end scene)
-+ Two buttons(game start & setting) on the start scene
++ Nice looking backgrounds (basic game scene)
 + Two different colors paddles with white parts
 + One ping pong ball starts moving in the middle of the scene
-+ Enable to play the music while playing this game
 + Two energy bars on the top of the game window 
-+ Two scores will be shown on the top of the game window 
++ Two scores will be shown on the top of the game window
 + Player who gets two points first is the winner
-+ Two buttons(restart & quit), a GIF and the winner will be shown on the end scene
+
 ### Description:
 
 There is one ball which pops up and bounce between the up and down edges of game window and paddles.
@@ -129,21 +154,47 @@ Every time the ball touches one's paddle, the energy bar of one's side will be a
 
 *Secret: If the ball hits the white parts of your paddle, your energy bar will be added some extra points*
 
-Player could hit the D(/left arrow) key to change the ball's direction while the energy bar of his/her side was filled.
+Player could hit the *D*(/left arrow) key to change the ball's direction while the energy bar of his/her side was filled.
 
 Try to get two points first and you will win this game, good luck.
 
 
 ## Advance Mode(PVE) 
-+ 
++ Nice looking backgrounds (basic game scene)
++ Two different colors paddles with white parts
++ One ping pong ball starts moving in the middle of the scene
++ Two energy bars on the top of the game window 
++ Two scores will be shown on the top of the game window
++ Player who gets two points first is the winner
 ### Description:
-Not available yet......
-(The Game Developers are playing online games now)
+The red side player is the computer.
+
+*You could change the speed of it in the game setting page*
+
+There is one ball which pops up and bounce between the up and down edges of game window and paddles.
+
+Player should moves the paddle by pressing *W/S* keys to avoid the ball touches the edge behind them.
+
+Every time the ball touches one's paddle, the energy bar of one's side will be added.
+
+*Secret: If the ball hits the white parts of your paddle, your energy bar will be added some extra points*
+
+Player could hit the *D* key to change the ball's direction while the energy bar of his/her side was filled.
+
+Try to get two points first and you will win this game, good luck.
+
+⚠️The computer knows how to play our game.
+
+
+
 
 
 ## Super Mode 
 Not available yet......
 (The Game Developers are still playing online games...)
+
+
+
 
 
 
