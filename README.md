@@ -51,6 +51,7 @@ And use this type of words to represent (LEFT[RED] PLAYER).
 
 
 ## Game Starting Scene
+### Include:
 + Nice looking backgrounds (main scene)
 + Game Start Button
 + Setting Button
@@ -72,6 +73,7 @@ After pressing the Setting Button, you'll enter the Game Setting Page.
 
 
 ## Mode Selecting Page
+### Include:
 + Nice looking backgrounds (mode selecting scene)
 + Basic Mode Button
 + Advance Mode(PVE) Button
@@ -92,6 +94,7 @@ After pressing the Super Mode Button, you'll enter the Super Mode.
 
 
 ## Game Setting Page
+### Include:
 + Volume Bar with number changing while user dragging it
 + Mute Button
 + AI Speed customize Check Box with a textfield and confirm button after checking it
@@ -113,6 +116,7 @@ After customize your setting do not forget to press the Back button to confirm y
 
 
 ## End Scene
+### Include:
 + Nice looking backgrounds (ending scene)
 + Great firework GIF
 + Restart button
@@ -139,6 +143,7 @@ After you press the Quit button, you will quit this game.
 
 
 ## Basic Mode 
+### Include:
 + Nice looking backgrounds (basic game scene)
 + Two different colors paddles with white parts
 + One ping pong ball starts moving in the middle of the scene
@@ -170,6 +175,7 @@ Try to get two points first and you will win this game, good luck.
 
 
 ## Advance Mode(PVE) 
+### Include:
 + Nice looking backgrounds (basic game scene)
 + Two different colors paddles with white parts
 + One ping pong ball starts moving in the middle of the scene
