@@ -160,7 +160,7 @@ Players should move the paddles by pressing *W/S*(up/down) keys to avoid the bal
 
 Every time the ball touches one's paddle, the energy bar of one's side will be added.
 
-*Secret: If the ball hits the white parts of your paddle, your energy bar will be added some extra points*
+㊙️*If the ball hits the white parts of your paddle, your energy bar will be added some extra points*
 
 Player could hit the *D*(/left arrow) key to change the ball's direction while the energy bar of his/her side was filled.
 
@@ -196,7 +196,7 @@ Player should moves the paddle by pressing *W/S* keys to avoid the ball touches 
 
 Every time the ball touches one's paddle, the energy bar of one's side will be added.
 
-*Secret: If the ball hits the white parts of your paddle, your energy bar will be added some extra points*
+㊙️*If the ball hits the white parts of your paddle, your energy bar will be added some extra points*
 
 Player could hit the *D* key to change the ball's direction while the energy bar of his/her side was filled.
 
