@@ -11,7 +11,9 @@ So I'm not going to write this, wa ha ha ha.
 
 
 #### 2. Install Java in Vscode 
+You could try this:
 
+   https://code.visualstudio.com/docs/java/java-tutorial
 
 
 
