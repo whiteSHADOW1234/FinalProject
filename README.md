@@ -40,7 +40,7 @@ https://jar-download.com/artifacts/com.googlecode.soundlibs/jlayer/1.0.1.4/sourc
 
 #### 4. Find a friend to play this game with you ~
 
-Or you can just play this game with your hands(/the computer) if you don't have any friends...
+Or you can just play this game with your hands(/the AI) if you don't have any friends...
 
 I will use this type of words to represent *RIGHT[BLUE] PLAYER*.
 
@@ -185,7 +185,7 @@ Try to get two points first and you will win this game, good luck.
 
 
 ### Description:
-The red side player is the computer.
+The red side player is the AI.
 
 *You could change the speed of it in the game setting page*
 
@@ -201,7 +201,7 @@ Player could hit the *D* key to change the ball's direction while the energy bar
 
 Try to get two points first and you will win this game, good luck.
 
-⚠️The computer knows how to play our game.
+⚠️The AI knows how to play our game. 
 
 
 
