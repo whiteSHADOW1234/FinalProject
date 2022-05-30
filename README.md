@@ -15,13 +15,14 @@ You could try this:
 
    https://code.visualstudio.com/docs/java/java-tutorial
 
-
-
+1. Create a file which you would run this project in and open it 
+2. Import Java's & JavaFX's JRE in the refer lib
+3. Press the "new configurations" button which is under the Run button above your window (you can copy and paste the code under __3. Install JavaFx in Vscode__ )
 
 
 #### 3. Install JavaFx in Vscode 
 1. Add the configuration sentence in the java configuration
-
+   __Change "\" to "/" in the path of your javafx-sdk__
 ```
 "vmArgs": "--module-path /Users/<user>/Downloads/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml,javafx.media",
 ```
@@ -39,6 +40,7 @@ https://jar-download.com/artifacts/com.googlecode.soundlibs/jlayer/1.0.1.4/sourc
 3.  And put it in the refer lib
 
 ![](https://i.imgur.com/7xCGvRb.png)
+
 
 #### 4. Find a friend to play this game with you ~
 
