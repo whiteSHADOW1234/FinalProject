@@ -5,7 +5,8 @@
 ## Set up the environment
 #### 1. Install Vscode 
 Hmmm, I think you know how to do this right ?
-So I'm not going to write this,wa ha ha ha.
+
+So I'm not going to write this, wa ha ha ha.
 
 
 
@@ -41,7 +42,8 @@ https://jar-download.com/artifacts/com.googlecode.soundlibs/jlayer/1.0.1.4/sourc
 
 Or you can just play this game with your hands(/the computer) if you don't have any friends...
 
-I will use this type of words to represent *RIGHT[BLUE] PLAYER* .
+I will use this type of words to represent *RIGHT[BLUE] PLAYER*.
+
 And use this type of words to represent (LEFT[RED] PLAYER).
 
 
@@ -159,6 +161,14 @@ Player could hit the *D*(/left arrow) key to change the ball's direction while t
 Try to get two points first and you will win this game, good luck.
 
 
+
+
+
+
+
+
+
+
 ## Advance Mode(PVE) 
 + Nice looking backgrounds (basic game scene)
 + Two different colors paddles with white parts
@@ -166,6 +176,8 @@ Try to get two points first and you will win this game, good luck.
 + Two energy bars on the top of the game window 
 + Two scores will be shown on the top of the game window
 + Player who gets two points first is the winner
+
+
 ### Description:
 The red side player is the computer.
 
