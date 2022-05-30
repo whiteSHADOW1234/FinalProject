@@ -11,15 +11,18 @@ So I'm not going to write this, wa ha ha ha.
 
 
 #### 2. Install Java in Vscode 
+You could try this:
 
+   https://code.visualstudio.com/docs/java/java-tutorial
 
-
+Then, create a file which you would run this project in and open it.
 
 
 
 #### 3. Install JavaFx in Vscode 
-1. Add the configuration sentence in the java configuration
-
+1. Press the "new configurations" button which is under the Run button above your window.
+2. Add the configuration sentence in the java configuration
+   __Change "\" to "/" in the path of your javafx-sdk__
 ```
 "vmArgs": "--module-path /Users/<user>/Downloads/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml,javafx.media",
 ```
@@ -27,16 +30,14 @@ So I'm not going to write this, wa ha ha ha.
 * Java configuration should looks like this
 ![](https://i.imgur.com/sfXtJg8.png)
 
-2. Do not forget to download this configuration
-    * Here is the URL:
-https://jar-download.com/artifacts/com.googlecode.soundlibs/jlayer/1.0.1.4/source-code
-
-![](https://i.imgur.com/YY2UGRA.png)
 
 
-3.  And put it in the refer lib
+3. Import Java's & JavaFX's JRE in the refer lib
 
 ![](https://i.imgur.com/7xCGvRb.png)
+
+4. 😃Done!!!
+
 
 #### 4. Find a friend to play this game with you ~
 
@@ -159,7 +160,7 @@ Players should move the paddles by pressing *W/S*(up/down) keys to avoid the bal
 
 Every time the ball touches one's paddle, the energy bar of one's side will be added.
 
-*Secret: If the ball hits the white parts of your paddle, your energy bar will be added some extra points*
+㊙️*If the ball hits the white parts of your paddle, your energy bar will be added some extra points*
 
 Player could hit the *D*(/left arrow) key to change the ball's direction while the energy bar of his/her side was filled.
 
@@ -195,7 +196,7 @@ Player should moves the paddle by pressing *W/S* keys to avoid the ball touches 
 
 Every time the ball touches one's paddle, the energy bar of one's side will be added.
 
-*Secret: If the ball hits the white parts of your paddle, your energy bar will be added some extra points*
+㊙️*If the ball hits the white parts of your paddle, your energy bar will be added some extra points*
 
 Player could hit the *D* key to change the ball's direction while the energy bar of his/her side was filled.
 
