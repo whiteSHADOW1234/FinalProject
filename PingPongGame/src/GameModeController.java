@@ -15,6 +15,9 @@ public class GameModeController {
     private Button pve;
 
     @FXML
+    private Button CSGO;
+
+    @FXML
     void to_normal_game(ActionEvent event) {
         Stage stage = (Stage) normal_mode.getScene().getWindow();
         stage.close();
@@ -31,6 +34,18 @@ public class GameModeController {
         stage.close();
         // GameFrame GF = new GameFrame();
         GameFrame_PVE GF = new GameFrame_PVE();
+        Paddle.machine_speed = AI_speed;
+        PongGame.winner = GF.check_if_GG();
+
+        start_play.end_page_starter(stage);
+    }
+
+    @FXML
+    void to_infinity_game(ActionEvent event) {
+        Stage stage = (Stage) normal_mode.getScene().getWindow();
+        stage.close();
+        // GameFrame GF = new GameFrame();
+        GameFrame_infinity GF = new GameFrame_infinity();
         Paddle.machine_speed = AI_speed;
         PongGame.winner = GF.check_if_GG();
 
