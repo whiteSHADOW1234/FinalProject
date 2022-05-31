@@ -17,3 +17,9 @@
 #pve{
     -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #00fffb, #50fc00af);
 }
+#Infinity_ball{
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #00fffb, #50fc00af);
+}
+#gamemode_back{
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #00fffb, #50fc00af);
+}

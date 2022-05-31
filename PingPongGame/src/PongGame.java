@@ -68,7 +68,6 @@ public class PongGame extends Application implements Initializable {
     @FXML
     private Slider volumecontroller;
 
-    // 路徑問題
     @FXML
     void Confirm_Speed(ActionEvent event) {
         try {

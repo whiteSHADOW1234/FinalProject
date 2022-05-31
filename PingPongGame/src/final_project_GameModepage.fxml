@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="277.0" prefWidth="488.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameModeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="277.0" prefWidth="488.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameModeController">
    <children>
       <ImageView fitHeight="295.0" fitWidth="491.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -23,10 +23,11 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <Button fx:id="CSGO" layoutX="180.0" layoutY="195.0" mnemonicParsing="false" onAction="#to_infinity_game" prefHeight="33.0" prefWidth="127.0" text="CSGO">
+      <Button fx:id="Infinity_ball" layoutX="180.0" layoutY="195.0" mnemonicParsing="false" onAction="#to_infinity_game" prefHeight="33.0" prefWidth="127.0" text="Infinity Ball">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
+      <Button fx:id="gamemode_back" layoutX="224.0" layoutY="239.0" mnemonicParsing="false" onAction="#gamemodeBack" text="Back" />
    </children>
 </AnchorPane>
