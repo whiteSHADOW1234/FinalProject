@@ -15,14 +15,15 @@ You could try this:
 
    https://code.visualstudio.com/docs/java/java-tutorial
 
-Then, create a folder which you would run this project in and open it.
+Then, create a folder which you would like to run this project in and open it.
 
 
 
 #### 3. Install JavaFx in Vscode 
 1. Press the "new configurations" button which is under the Run button above your window.
-2. Add the configuration sentence in the java configuration
-   __Change "\" to "/" in the path of your javafx-sdk__
+2. Add the java configuration sentence in the launch.json file
+
+   __Do not forget to change "\" to "/" in the path of your javafx-sdk__
 ```
 "vmArgs": "--module-path /Users/<user>/Downloads/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml,javafx.media",
 ```
