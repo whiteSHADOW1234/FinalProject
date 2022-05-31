@@ -6,7 +6,7 @@ public class Ball_infinity extends Rectangle {
 	Random random;
 	int xVelocity;
 	int yVelocity;
-	int initialSpeed = 10;
+	static int initialSpeed = 10;
 
 	Ball_infinity(int x, int y, int width, int height) {
 		super(x, y, width, height);
