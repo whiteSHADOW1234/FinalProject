@@ -54,6 +54,7 @@ Or you can just play this game with your hands(/the AI) if you don't have any fr
 + Game Start Button
 + Setting Button
 + Enable to play the music while playing this game
++ Developer Inf Button
 
 ### Description:
 This is the first screen that pops up after you run this project on your device which had to finish setting up the environment.
@@ -64,7 +65,7 @@ After pressing the Game Start Button, you'll enter the Mode Selecting Page.
 
 After pressing the Setting Button, you'll enter the Game Setting Page.
 
-
+After pressing the Developer Inf Button, you'll enter the Developer Inf Page.
 
 
 
@@ -74,6 +75,7 @@ After pressing the Setting Button, you'll enter the Game Setting Page.
 + Basic Mode Button
 + Advance Mode(PVE) Button
 + Super Mode(CSGO) Button 
++ Back Button
 
 ### Description:
 There are three buttons on this screen.
@@ -84,7 +86,7 @@ After pressing the Advance(PVE) Mode Button, you'll enter the Advance(PVE) Mode.
 
 After pressing the Super Mode Button, you'll enter the Super(CSGO) Mode.
 
-
+After pressing the Back Button, you'll get back to the Game Starting Scene.
 
 
 
@@ -106,10 +108,23 @@ Oh, don't forget to press the confirm button!!!
 (*Some secret things are hiding in here...*)
 
 
+## Developer Inf Page
+### Include:
++ Nice looking background (Developer Inf Scene)
++ Four names of the game developers 
++ Email to contact us
++ A Message Bar (No one knows how this gonna work:smile:)
+
+### Description:
+:smile:You can see and contact us here !!! 
+
+
+
+
 
 ## End Scene
 ### Include:
-+ Nice looking background (Ending scene)
++ Nice looking background (Ending Scene)
 + Great firework GIF
 + Restart button
 + Quit button
