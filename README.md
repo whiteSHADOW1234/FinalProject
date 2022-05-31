@@ -126,7 +126,7 @@ After customize your setting do not forget to press the Back button to confirm y
 + Winner will be shown on this scene
 
 ### Description:
-PLayers could see who's the winner in this game on this page.
+Players could see who's the winner in this game on this page.
 
 After you press the Restart button, you will jump to the Game Starting Scene.
 
