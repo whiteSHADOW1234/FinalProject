@@ -33,6 +33,9 @@ public class PongGame extends Application implements Initializable {
     int input_ball_speed_int;
 
     @FXML
+    private Button developer_information;
+
+    @FXML
     private Button confirm;
 
     @FXML
@@ -67,6 +70,24 @@ public class PongGame extends Application implements Initializable {
 
     @FXML
     private Slider volumecontroller;
+
+    @FXML
+    void Developer_Information(ActionEvent event) {
+        Stage stage = new Stage();
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("final_project_developer_information.fxml"));
+
+            Scene background = new Scene(root);
+            //
+            // background.getStylesheets().add(getClass().getResource("final_project_CSS.css").toExternalForm());
+            //
+            stage.setTitle("Developers Information");
+            stage.setScene(background);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     void Confirm_Speed(ActionEvent event) {
@@ -208,6 +229,15 @@ public class PongGame extends Application implements Initializable {
         fade.setToValue(1);
         fade.play();
 
+        FadeTransition fade3 = new FadeTransition();
+        fade3.setNode(developer_information);
+        fade3.setDuration(Duration.seconds(1));
+        fade3.setCycleCount(1);
+        fade3.setInterpolator(Interpolator.LINEAR);
+        fade3.setFromValue(0);
+        fade3.setToValue(1);
+        fade3.play();
+
     }
 
     // 重開遊戲聲音變小
@@ -272,6 +302,7 @@ public class PongGame extends Application implements Initializable {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_endpage.fxml"));
 
             Scene background = new Scene(root);
+            background.getStylesheets().add(getClass().getResource("final_project_CSS.css").toExternalForm());
             stage.setTitle("Pong Game");
             stage.setScene(background);
             stage.show();

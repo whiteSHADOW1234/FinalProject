@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="developer_information">
+   <children>
+      <ImageView fitHeight="410.0" fitWidth="713.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@code.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="229.0" fitWidth="291.0" layoutX="78.0" layoutY="101.0" opacity="0.62" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@全黑.jpg" />
+         </image>
+      </ImageView>
+      <Text fx:id="membergroup" fill="WHITE" layoutX="68.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Group" wrappingWidth="339.2447814941406">
+         <font>
+            <Font name="Vladimir Script" size="55.0" />
+         </font>
+      </Text>
+      <Text fx:id="Kuo" fill="WHITE" layoutX="98.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chia-Zung Kuo">
+         <font>
+            <Font name="Vladimir Script" size="42.0" />
+         </font>
+      </Text>
+      <Text fx:id="Huang" fill="WHITE" layoutX="100.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enkai Huang">
+         <font>
+            <Font name="Vladimir Script" size="42.0" />
+         </font>
+      </Text>
+      <Text fx:id="Lee" fill="WHITE" layoutX="97.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cheng-De Lee" wrappingWidth="247.24478149414062">
+         <font>
+            <Font name="Vladimir Script" size="42.0" />
+         </font>
+      </Text>
+      <Text fx:id="Shieh" fill="WHITE" layoutX="97.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ming-Yu Shieh">
+         <font>
+            <Font name="Vladimir Script" size="42.0" />
+         </font>
+      </Text>
+      <Text fx:id="gmail" fill="WHITE" layoutX="68.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Developer : n22126@gmail.com">
+         <font>
+            <Font name="Vladimir Script" size="35.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="terminal" fitHeight="150.0" fitWidth="200.0" layoutX="387.0" layoutY="47.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@全黑.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="input_command" layoutX="407.0" layoutY="145.0" onAction="#command_action" opacity="0.65" />
+      <Label fx:id="hint" layoutX="462.0" layoutY="76.0" text="訊息" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

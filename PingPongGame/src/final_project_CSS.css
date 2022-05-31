@@ -11,6 +11,9 @@
 #setting{
     -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #780090, #d400ff41);
 }
+#developer_information{
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #780090, #d400ff41);
+}
 #normal_mode{
     -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #00fffb, #50fc00af);
 }
@@ -22,4 +25,13 @@
 }
 #gamemode_back{
     -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #00fffb, #50fc00af);
+}
+#confirm{
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #0000004a, #fffffffa);
+}
+#quit{
+    -fx-background-color: linear-gradient(#95e1229d, #fbff00);
+}
+#restart{
+    -fx-background-color: linear-gradient(#95e1229d, #fbff00);
 }
