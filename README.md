@@ -229,4 +229,4 @@ The ending page in this mode shows how many balls do player caught in 60 seconds
 
 *If you change the boolean value "beta" on the 30th line of GamePanel.java to true you will enter the greatest mode of this game......* 
 ### The Greatest Mode ------
-Every thing in here are secrets:face_with_finger_covering_closed_lips:
+Every thing in here are secrets
