@@ -22,28 +22,57 @@
 }
 
 /* end page effections */
-#quit{
-    -fx-background-color: linear-gradient(#95e1229d, #fbff00);
+#quit {
+    -fx-color-one: #95e1229d;
+    -fx-color-two: #5dec04af;
+    -fx-color-three: #fbff00;
+  
+    -fx-background-color:
+        linear-gradient(#f2f2f2, -fx-color-one),
+        linear-gradient(#fcfcfc 0%, -fx-color-two 20%, -fx-color-one 100%),
+        linear-gradient(#dddddd 0%, -fx-color-three 50%);
+    -fx-background-radius: 8, 7, 6;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
 }
-#restart{
-    -fx-background-color: linear-gradient(#95e1229d, #fbff00);
+#quit:hover {
+    -fx-color-one: #00bc1f;
+    -fx-color-two: #00bc1f;
+    -fx-color-three: #00bc1f;
+}
+#quit:pressed {
+    -fx-color-one: #684202;
+    -fx-color-two: #684202;
+    -fx-color-three: #684202;
 }
 
-
+#restart {
+    -fx-color-one: #95e1229d;
+    -fx-color-two: #5dec04af;
+    -fx-color-three: #fbff00;
+  
+    -fx-background-color:
+        linear-gradient(#f2f2f2, -fx-color-one),
+        linear-gradient(#fcfcfc 0%, -fx-color-two 20%, -fx-color-one 100%),
+        linear-gradient(#dddddd 0%, -fx-color-three 50%);
+    -fx-background-radius: 8, 7, 6;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+#restart:hover {
+    -fx-color-one: #00bc1f;
+    -fx-color-two: #00bc1f;
+    -fx-color-three: #00bc1f;
+}
+#restart:pressed {
+    -fx-color-one: #684202;
+    -fx-color-two: #684202;
+    -fx-color-three: #684202;
+}
 
 /* gamemode page effections */
-/* #normal_mode{
-    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #00fffb, #50fc00af);
-}
-#pve{
-    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #00fffb, #50fc00af);
-}
-#Infinity_ball{
-    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #00fffb, #50fc00af);
-}
-#gamemode_back{
-    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #00fffb, #50fc00af);
-} */
 #normal_mode {
     -fx-color-one: #00fffb;
     -fx-color-two: #4aef89af;

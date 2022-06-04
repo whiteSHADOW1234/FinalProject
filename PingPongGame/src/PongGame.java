@@ -243,9 +243,10 @@ public class PongGame extends Application implements Initializable {
 
 
 
-        // //text animation
+        //text animation
+
         // FadeTransition fadetext = new FadeTransition();
-        // fadetext.setNode(dev.huang);
+        // fadetext.setNode(dev.Huang);
         // fadetext.setDuration(Duration.seconds(1));
         // fadetext.setCycleCount(1);
         // fadetext.setInterpolator(Interpolator.LINEAR);

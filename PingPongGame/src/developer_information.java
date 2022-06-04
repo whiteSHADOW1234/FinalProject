@@ -38,5 +38,12 @@ public class developer_information {
     void command_action(ActionEvent event) {
 
     }
+    void text_animation()
+    {
+        //change text
+        String text = "";
+        Huang.setText(text);
+        System.out.println("hello");
+    }
 
 }
