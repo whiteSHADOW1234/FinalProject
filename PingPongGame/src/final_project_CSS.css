@@ -13,6 +13,12 @@
 #mute{
     -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #0000004a, #fffffffa);
 }
+#mute:hover {
+  -fx-background-color: #606264;
+}
+#mute:pressed {
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #fffffffa, #0000004a)
+}
 #setting_back {
     -fx-color-one: #53c15e;
     -fx-color-two: #5dec04af;
@@ -37,11 +43,23 @@
     -fx-color-two: #3471ff;
     -fx-color-three: #3471ff;
 }
-/* #setting_back{
-    -fx-background-color: linear-gradient(#53c15e, #00ffc81c);
-} */
+
 #confirm{
     -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #0000004a, #fffffffa);
+}
+#confirm:hover {
+  -fx-background-color: #606264;
+}
+#confirm:pressed {
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #fffffffa, #0000004a)
+}
+
+#speedsetting {
+  -fx-border-color: transparent;
+  -fx-border : 0 0 1 0;
+  -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #022457, #ffffff98);
+  -fx-border-radius: 150;
+  -fx-text-fill: rgb(143, 249, 255);
 }
 
 /* end page effections */
