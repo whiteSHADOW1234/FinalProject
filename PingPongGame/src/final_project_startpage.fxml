@@ -23,9 +23,9 @@
             <Font name="Rockwell Extra Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="developer_information" layoutX="233.0" layoutY="307.0" mnemonicParsing="false" onAction="#Developer_Information" prefHeight="41.0" prefWidth="159.0" text="Developer Inf" textFill="WHITE">
+      <Button fx:id="developer_information" layoutX="233.0" layoutY="307.0" mnemonicParsing="false" onAction="#Developer_Information" prefHeight="41.0" prefWidth="159.0" text="Developer Info" textFill="WHITE">
          <font>
-            <Font name="Rockwell Extra Bold" size="16.0" />
+            <Font name="Rockwell Extra Bold" size="15.0" />
          </font>
       </Button>
    </children>

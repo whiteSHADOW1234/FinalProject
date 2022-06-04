@@ -38,7 +38,7 @@
          </font>
       </CheckBox>
       <TextField fx:id="speedsetting" layoutX="301.0" layoutY="268.0" prefHeight="23.0" prefWidth="71.0" visible="false" />
-      <Button fx:id="confirm" layoutX="399.0" layoutY="268.0" mnemonicParsing="false" onAction="#Confirm_Speed" text="Confirm" visible="false">
+      <Button fx:id="confirm" layoutX="399.0" layoutY="268.0" mnemonicParsing="false" onAction="#Confirm_Speed" text="Confirm" textFill="WHITE" visible="false">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>

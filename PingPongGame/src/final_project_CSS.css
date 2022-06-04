@@ -13,10 +13,33 @@
 #mute{
     -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #0000004a, #fffffffa);
 }
-
-#setting_back{
-    -fx-background-color: linear-gradient(#53c15e, #00ffc81c);
+#setting_back {
+    -fx-color-one: #53c15e;
+    -fx-color-two: #5dec04af;
+    -fx-color-three: #00ffc81c;
+  
+    -fx-background-color:
+        linear-gradient(#f2f2f2, -fx-color-one),
+        linear-gradient(#fcfcfc 0%, -fx-color-two 20%, -fx-color-one 100%),
+        linear-gradient(#dddddd 0%, -fx-color-three 50%);
+    -fx-background-radius: 8, 7, 6;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
 }
+#setting_back:hover {
+    -fx-color-one: #00bc1f;
+    -fx-color-two: #00bc1f;
+    -fx-color-three: #00bc1f;
+}
+#setting_back:pressed {
+    -fx-color-one: #3471ff;
+    -fx-color-two: #3471ff;
+    -fx-color-three: #3471ff;
+}
+/* #setting_back{
+    -fx-background-color: linear-gradient(#53c15e, #00ffc81c);
+} */
 #confirm{
     -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #0000004a, #fffffffa);
 }
