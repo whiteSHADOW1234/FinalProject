@@ -22,6 +22,7 @@ public class GameModeController {
 
     @FXML
     private Button Infinity_ball;
+    
 
     @FXML
     void to_normal_game(ActionEvent event) {

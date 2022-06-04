@@ -29,6 +29,9 @@ public class PongGame extends Application implements Initializable {
     static int winner;
     static int currentvolume = 50;
     SongPlayer DJ = new SongPlayer();
+    //
+    developer_information dev = new developer_information();
+    //
     String input_ball_speed;
     int input_ball_speed_int;
 
@@ -237,6 +240,18 @@ public class PongGame extends Application implements Initializable {
         fade3.setFromValue(0);
         fade3.setToValue(1);
         fade3.play();
+
+
+
+        // //text animation
+        // FadeTransition fadetext = new FadeTransition();
+        // fadetext.setNode(dev.huang);
+        // fadetext.setDuration(Duration.seconds(1));
+        // fadetext.setCycleCount(1);
+        // fadetext.setInterpolator(Interpolator.LINEAR);
+        // fadetext.setFromValue(0);
+        // fadetext.setToValue(1);
+        // fadetext.play();
 
     }
 

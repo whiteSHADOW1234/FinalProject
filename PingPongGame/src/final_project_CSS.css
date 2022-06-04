@@ -1,3 +1,15 @@
+/* start page effections */
+#setting{
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #780090, #d400ff41);
+}
+#developer_information{
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #780090, #d400ff41);
+}
+#start{
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #780090, #d400ff41);
+}
+
+/* setting page effections */
 #mute{
     -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #0000004a, #fffffffa);
 }
@@ -5,16 +17,22 @@
 #setting_back{
     -fx-background-color: linear-gradient(#53c15e, #00ffc81c);
 }
-#start{
-    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #780090, #d400ff41);
+#confirm{
+    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #0000004a, #fffffffa);
 }
-#setting{
-    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #780090, #d400ff41);
+
+/* end page effections */
+#quit{
+    -fx-background-color: linear-gradient(#95e1229d, #fbff00);
 }
-#developer_information{
-    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #780090, #d400ff41);
+#restart{
+    -fx-background-color: linear-gradient(#95e1229d, #fbff00);
 }
-#normal_mode{
+
+
+
+/* gamemode page effections */
+/* #normal_mode{
     -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #00fffb, #50fc00af);
 }
 #pve{
@@ -25,13 +43,108 @@
 }
 #gamemode_back{
     -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #00fffb, #50fc00af);
-}
-#confirm{
-    -fx-background-color: radial-gradient(center 50% -40%, radius 200%, #0000004a, #fffffffa);
-}
-#quit{
-    -fx-background-color: linear-gradient(#95e1229d, #fbff00);
-}
-#restart{
-    -fx-background-color: linear-gradient(#95e1229d, #fbff00);
-}
+} */
+#normal_mode {
+    -fx-color-one: #00fffb;
+    -fx-color-two: #4aef89af;
+    -fx-color-three: #50fc00af;
+  
+    -fx-background-color:
+        linear-gradient(#f2f2f2, -fx-color-one),
+        linear-gradient(#fcfcfc 0%, -fx-color-two 20%, -fx-color-one 100%),
+        linear-gradient(#dddddd 0%, -fx-color-three 50%);
+    -fx-background-radius: 8, 7, 6;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+  }
+  
+  #normal_mode:hover {
+    -fx-color-one: #0bdaff;
+    -fx-color-two: #0bdaff;
+    -fx-color-three: #0bdaff;
+  }
+  
+  #normal_mode:pressed {
+    -fx-color-one: #235891;
+    -fx-color-two: #235891;
+    -fx-color-three: #235891;
+  }
+  #pve {
+    -fx-color-one: #00fffb;
+    -fx-color-two: #4aef89af;
+    -fx-color-three: #50fc00af;
+  
+    -fx-background-color:
+        linear-gradient(#f2f2f2, -fx-color-one),
+        linear-gradient(#fcfcfc 0%, -fx-color-two 20%, -fx-color-one 100%),
+        linear-gradient(#dddddd 0%, -fx-color-three 50%);
+    -fx-background-radius: 8, 7, 6;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+  }
+  
+  #pve:hover {
+    -fx-color-one: #0bdaff;
+    -fx-color-two: #0bdaff;
+    -fx-color-three: #0bdaff;
+  }
+  
+  #pve:pressed {
+    -fx-color-one: #235891;
+    -fx-color-two: #235891;
+    -fx-color-three: #235891;
+  }
+  #Infinity_ball {
+    -fx-color-one: #00fffb;
+    -fx-color-two: #4aef89af;
+    -fx-color-three: #50fc00af;
+  
+    -fx-background-color:
+        linear-gradient(#f2f2f2, -fx-color-one),
+        linear-gradient(#fcfcfc 0%, -fx-color-two 20%, -fx-color-one 100%),
+        linear-gradient(#dddddd 0%, -fx-color-three 50%);
+    -fx-background-radius: 8, 7, 6;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+  }
+  
+  #Infinity_ball:hover {
+    -fx-color-one: #0bdaff;
+    -fx-color-two: #0bdaff;
+    -fx-color-three: #0bdaff;
+  }
+  
+  #Infinity_ball:pressed {
+    -fx-color-one: #235891;
+    -fx-color-two: #235891;
+    -fx-color-three: #235891;
+  }
+  #gamemode_back {
+    -fx-color-one: #00fffb;
+    -fx-color-two: #4aef89af;
+    -fx-color-three: #50fc00af;
+  
+    -fx-background-color:
+        linear-gradient(#f2f2f2, -fx-color-one),
+        linear-gradient(#fcfcfc 0%, -fx-color-two 20%, -fx-color-one 100%),
+        linear-gradient(#dddddd 0%, -fx-color-three 50%);
+    -fx-background-radius: 8, 7, 6;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+  }
+  
+  #gamemode_back:hover {
+    -fx-color-one: #0bdaff;
+    -fx-color-two: #0bdaff;
+    -fx-color-three: #0bdaff;
+  }
+  
+  #gamemode_back:pressed {
+    -fx-color-one: #235891;
+    -fx-color-two: #235891;
+    -fx-color-three: #235891;
+  }
