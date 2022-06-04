@@ -139,9 +139,6 @@ public class PongGame extends Application implements Initializable {
     @FXML
     void adjust_volume(MouseEvent event) {
 
-        // convert volumecontroller.getValue() to int
-        // temp = (int) (volumecontroller.getValue());
-        // volume.setText(Integer.toString(temp));
     }
 
     @FXML
@@ -213,6 +210,8 @@ public class PongGame extends Application implements Initializable {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
+        
         // button animation
         FadeTransition fade2 = new FadeTransition();
         fade2.setNode(setting);
