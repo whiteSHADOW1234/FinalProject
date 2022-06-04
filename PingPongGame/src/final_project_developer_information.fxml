@@ -25,22 +25,22 @@
             <Font name="Vladimir Script" size="55.0" />
          </font>
       </Text>
-      <Text fx:id="Kuo" fill="WHITE" layoutX="98.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chia-Zung Kuo">
+      <Text fx:id="Kuo" fill="WHITE" layoutX="98.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chia-Zung Kuo" visible="false">
          <font>
             <Font name="Vladimir Script" size="42.0" />
          </font>
       </Text>
-      <Text fx:id="Huang" fill="WHITE" layoutX="100.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enkai Huang">
+      <Text fx:id="Huang" fill="WHITE" layoutX="100.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enkai Huang" visible="false">
          <font>
             <Font name="Vladimir Script" size="42.0" />
          </font>
       </Text>
-      <Text fx:id="Lee" fill="WHITE" layoutX="97.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cheng-De Lee" wrappingWidth="247.24478149414062">
+      <Text fx:id="Lee" fill="WHITE" layoutX="97.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cheng-De Lee" visible="false" wrappingWidth="247.24478149414062">
          <font>
             <Font name="Vladimir Script" size="42.0" />
          </font>
       </Text>
-      <Text fx:id="Shieh" fill="WHITE" layoutX="97.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ming-Yu Shieh">
+      <Text fx:id="Shieh" fill="WHITE" layoutX="97.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ming-Yu Shieh" visible="false">
          <font>
             <Font name="Vladimir Script" size="42.0" />
          </font>

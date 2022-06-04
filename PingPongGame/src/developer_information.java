@@ -79,33 +79,38 @@ public class developer_information implements Initializable {
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
-                        if (id == 1)
+                        if (id == 1) {
+                            Huang.setVisible(true);
                             Huang.setText(textOut);
-                        else if (id == 2)
+                        } else if (id == 2) {
+                            Lee.setVisible(true);
                             Lee.setText(textOut);
-                        else if (id == 3)
+                        } else if (id == 3) {
+                            Shieh.setVisible(true);
                             Shieh.setText(textOut);
-                        else if (id == 4)
+                        } else if (id == 4) {
+                            Kuo.setVisible(true);
                             Kuo.setText(textOut);
+                        }
                     }
                 });
             }
         };
-        
-        textAnimator1 = new TextAnimator("Enkai Huang", 100, textOutput, 1);
-        textAnimator2 = new TextAnimator("Cheng-De Lee", 100, textOutput, 2);
-        textAnimator3 = new TextAnimator("Ming-yu Shieh", 100, textOutput, 3);
-        textAnimator4 = new TextAnimator("Chia-Zung Kuo", 100, textOutput, 4);
+
+        textAnimator1 = new TextAnimator(100, textOutput, 1);
+        // textAnimator2 = new TextAnimator("Cheng-De Lee", 100, textOutput, 2);
+        // textAnimator3 = new TextAnimator("Ming-yu Shieh", 100, textOutput, 3);
+        // textAnimator4 = new TextAnimator("Chia-Zung Kuo", 100, textOutput, 4);
 
         Thread thread1 = new Thread(textAnimator1);
-        Thread thread2 = new Thread(textAnimator2);
-        Thread thread3 = new Thread(textAnimator3);
-        Thread thread4 = new Thread(textAnimator4);
+        // Thread thread2 = new Thread(textAnimator2);
+        // Thread thread3 = new Thread(textAnimator3);
+        // Thread thread4 = new Thread(textAnimator4);
 
         thread1.start();
-        thread2.start();
-        thread3.start();
-        thread4.start();
+        // thread2.start();
+        // thread3.start();
+        // thread4.start();
 
     }
 
