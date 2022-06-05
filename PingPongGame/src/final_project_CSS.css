@@ -83,9 +83,9 @@
     -fx-color-three: #00bc1f;
 }
 #quit:pressed {
-    -fx-color-one: #684202;
-    -fx-color-two: #684202;
-    -fx-color-three: #684202;
+    -fx-color-one: #d88900;
+    -fx-color-two: #d88900;
+    -fx-color-three: #d88900;
 }
 
 #restart {
@@ -108,9 +108,9 @@
     -fx-color-three: #00bc1f;
 }
 #restart:pressed {
-    -fx-color-one: #684202;
-    -fx-color-two: #684202;
-    -fx-color-three: #684202;
+    -fx-color-one: #d88900;
+    -fx-color-two: #d88900;
+    -fx-color-three: #d88900;
 }
 
 /* gamemode page effections */
