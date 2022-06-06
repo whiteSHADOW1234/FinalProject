@@ -22,7 +22,6 @@ public class GameModeController {
 
     @FXML
     private Button Infinity_ball;
-    
 
     @FXML
     void to_normal_game(ActionEvent event) {
@@ -54,7 +53,7 @@ public class GameModeController {
         // GameFrame GF = new GameFrame();
         GameFrame_infinity GF = new GameFrame_infinity();
         Paddle.machine_speed = AI_speed;
-        PongGame.winner = GF.check_if_GG();
+        PongGame.winner = -1 * GF.check_if_GG();
 
         start_play.end_page_starter(stage);
     }

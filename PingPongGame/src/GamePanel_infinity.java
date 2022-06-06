@@ -29,7 +29,7 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 	Vector<Ball_infinity> balls_above_all = new Vector<Ball_infinity>();
 
 	boolean keep_going = true;
-	boolean beta = false; // only for testing
+	static boolean beta = false; // only for testing
 	long now;
 
 	GamePanel_infinity() {
@@ -41,7 +41,11 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 		newBall();
 		newMP_bar();
 		score = new Score(GAME_WIDTH, GAME_HEIGHT);
-		score.player2 = 60;
+		if (!beta) {
+			score.player2 = 60;
+		} else {
+			score.player2 = 10;
+		}
 		this.setFocusable(true);
 		this.addKeyListener(new AL());
 		this.setPreferredSize(SCREEN_SIZE);
@@ -168,45 +172,49 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 	}
 
 	public void skill_smash(int id) {
-		switch (id) {
-			case 1:
-				if (mp_bar_1.width >= 500) {
-					if (ball.xVelocity > 0) {
-						ball.xVelocity += 10;
-						if (ball.yVelocity > 0)
-							ball.yVelocity += 10;
-						else
-							ball.yVelocity -= 10;
-					} else {
-						ball.xVelocity *= -1;
-						ball.yVelocity /= 10;
+		for (Ball_infinity currentball : balls_above_all) {
+
+			switch (id) {
+				case 1:
+					if (mp_bar_1.width >= 500) {
+						if (currentball.xVelocity > 0) {
+							currentball.xVelocity += 10;
+							if (currentball.yVelocity > 0)
+								currentball.yVelocity += 10;
+							else
+								currentball.yVelocity -= 10;
+						} else {
+							currentball.xVelocity *= -1;
+							currentball.yVelocity /= 10;
+						}
+
+					}
+					break;
+				case 2:
+					if (mp_bar_2.width >= 500) {
+						if (currentball.xVelocity < 0) {
+							currentball.xVelocity -= 10;
+							if (currentball.yVelocity > 0)
+								currentball.yVelocity += 10;
+							else
+								currentball.yVelocity -= 10;
+						} else {
+							currentball.xVelocity *= -1;
+							currentball.yVelocity /= 10;
+						}
+
+						mp_bar_2.width -= 500;
 					}
 
-					mp_bar_1.width -= 500;
-				}
-				break;
-			case 2:
-				if (mp_bar_2.width >= 500) {
-					if (ball.xVelocity < 0) {
-						ball.xVelocity -= 10;
-						if (ball.yVelocity > 0)
-							ball.yVelocity += 10;
-						else
-							ball.yVelocity -= 10;
-					} else {
-						ball.xVelocity *= -1;
-						ball.yVelocity /= 10;
-					}
-
-					mp_bar_2.width -= 500;
-				}
-
+			}
+			if (beta) {
+				currentball.xVelocity *= -1000;
+				// mp_bar_2.width = 500;
+				mp_bar_1.width = 500;
+			}
 		}
-		if (beta) {
-			ball.xVelocity *= 1000;
-			mp_bar_2.width = 500;
-			mp_bar_1.width = 500;
-		}
+		if (!beta)
+			mp_bar_1.width -= 500;
 
 	}
 
@@ -241,7 +249,9 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 				repaint();
 				delta--;
 			}
-			if (all_time_always >= 60 * 60) {
+			if (all_time_always >= 60 * 10 && beta) {
+				keep_going = false;
+			} else if (all_time_always >= 60 * 60 && !beta) {
 				keep_going = false;
 			}
 
@@ -254,8 +264,9 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 		public void keyPressed(KeyEvent e) {
 			paddle1.keyPressed(e);
 			// paddle2.keyPressed(e);
-			// if (e.getKeyCode() == KeyEvent.VK_D) {
-			// skill_smash(1);
+			if (e.getKeyCode() == KeyEvent.VK_D) {
+				skill_smash(1);
+			}
 			// } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
 			// skill_smash(2);
 			// }

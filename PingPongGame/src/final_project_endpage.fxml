@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PongGame">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PongGame">
    <children>
       <ImageView fitHeight="613.0" fitWidth="710.0" layoutX="-9.0" layoutY="-164.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@灑花.gif" />
          </image>
       </ImageView>
-      <Label fx:id="situation" layoutX="220.0" layoutY="79.0" prefHeight="56.0" prefWidth="162.0" text="狀態" textFill="#f2ecec">
+      <Label fx:id="situation" alignment="CENTER" layoutX="18.0" layoutY="79.0" prefHeight="56.0" prefWidth="558.0" text="狀態" textFill="#f2ecec">
          <font>
             <Font name="Yu Gothic Medium" size="39.0" />
          </font>

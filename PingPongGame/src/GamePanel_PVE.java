@@ -31,7 +31,7 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 	Score score;
 
 	boolean keep_going = true;
-	boolean beta = true; // only for testing
+	static boolean beta = false; // only for testing
 	long now;
 	Random rd;
 	int deviation;
@@ -41,6 +41,8 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 		if (beta) {
 			MP_bar_WIDTH = 500;
 			// white_bar_HEIGHT = 100;ddd
+		} else {
+			MP_bar_WIDTH = 0;
 		}
 		newPaddles();
 		newMP_bar();
@@ -158,7 +160,9 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 			paddle2.y = GAME_HEIGHT - PADDLE_HEIGHT;
 		// give a player 1 point and creates new paddles & ball
 		if (ball.x <= 0) {
-			// score.player2++;
+			if (!beta) {
+				score.player2++;
+			}
 			newPaddles();
 			newBall();
 			System.out.println("Player 2: " + score.player2);

@@ -174,8 +174,10 @@ public class PongGame extends Application implements Initializable {
             } else if (PongGame.winner == 2) {
                 System.out.println("red");
                 situation.setText("紅方獲勝");
+            } else if (PongGame.winner < 0) {
+                situation.setText("成功擊球數 " + -1 * PongGame.winner);
             } else {
-                situation.setText("Error " + PongGame.winner);
+                situation.setText("ERROR s" + PongGame.winner);
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -211,7 +213,6 @@ public class PongGame extends Application implements Initializable {
             System.out.println(e.getMessage());
         }
 
-        
         // button animation
         FadeTransition fade2 = new FadeTransition();
         fade2.setNode(setting);
@@ -240,9 +241,7 @@ public class PongGame extends Application implements Initializable {
         fade3.setToValue(1);
         fade3.play();
 
-
-
-        //text animation
+        // text animation
 
         // FadeTransition fadetext = new FadeTransition();
         // fadetext.setNode(dev.Huang);

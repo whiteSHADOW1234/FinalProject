@@ -49,7 +49,24 @@ public class developer_information implements Initializable {
 
     @FXML
     void command_action(ActionEvent event) {
-
+        String command = input_command.getText();
+        if (command.equals("")) {
+            hint.setText("Please enter a command");
+        } else if (command.equals("/betamode on")) {
+            GamePanel.beta = true;
+            GamePanel_PVE.beta = true;
+            GamePanel_infinity.beta = true;
+            hint.setText("Beta mode is on\nyou should not see this \nif u are not a developer");
+        } else if (command.equals("/betamode off")) {
+            GamePanel.beta = false;
+            GamePanel_PVE.beta = false;
+            hint.setText("Beta mode is off\nyou should not see this \nif u are not a developer");
+        } else if (command.equals("command")) {
+            hint.setText("你很幽默喔");
+        } else {
+            hint.setText("try /betamode on \nor /betamode off");
+            // hint.setText("clear: clear the terminal");
+        }
     }
 
     // void text_animation() {
