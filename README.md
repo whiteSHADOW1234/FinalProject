@@ -51,10 +51,11 @@ Or you can just play this game with your hands(/the AI) if you don't have any fr
 ## Game Starting Scene
 ### Include:
 + Nice looking background (Main Scene)
-+ Game Start Button
-+ Setting Button
++ Game Start Button (with a spinning animation)
++ Setting Button (with a spinning animation)
++ Developer Inf Button (with a spinning animation)
 + Enable to play the music while playing this game
-+ Developer Inf Button
+
 
 ### Description:
 This is the first screen that pops up after you run this project on your device which had to finish setting up the environment.
@@ -93,9 +94,9 @@ After pressing the Back Button, you'll get back to the Game Starting Scene.
 ## Game Setting Page
 ### Include:
 + Volume Bar with the number changing while the user dragging it
-+ Mute Button
-+ AI Speed customize Check Box with a text field and confirm button pops up after checking it
-+ Back button
++ Mute Button (change color while you tap on it)
++ AI Speed customize Check Box with a text field and confirm button (change color while you tap on it) pops up after checking it
++ Back button (change color while you tap on it)
 + Nice looking background (setting scene)
 
 ### Description:
@@ -116,7 +117,7 @@ Oh, don't forget to press the confirm button!!!
 + A Message Bar (No one knows how this gonna work:smile:)
 
 ### Description:
-:smile:You can see and contact us here !!! 
+:smile:You can see our name with handwriting animation and the way to contact us here !!! 
 
 
 
@@ -126,8 +127,8 @@ Oh, don't forget to press the confirm button!!!
 ### Include:
 + Nice looking background (Ending Scene)
 + Great firework GIF
-+ Restart button
-+ Quit button
++ Restart button (change color while you tap on it)
++ Quit button (change color while you tap on it)
 + Winner(or the balls player caught) will be shown in this scene
 
 ### Description:
