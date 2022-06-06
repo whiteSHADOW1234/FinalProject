@@ -62,24 +62,25 @@ public class developer_information implements Initializable {
             hint.setText("Beta mode is off\nyou should not see this \nif u are not a developer");
         } else if (command.equals("command")) {
             hint.setText("你很幽默喔");
-        } else if (command.equals("/back")){
+        } else if (command.equals("/back")) {
             Stage stage = (Stage) Huang.getScene().getWindow();
             PongGame.DJ.resume_music();
             PongGame.DJ.setVolume(PongGame.currentvolume * 0.01);
             stage.close();
 
             try {
+                Stage stage_temp = new Stage();
                 Parent root = FXMLLoader.load(getClass().getResource("final_project_startpage.fxml"));
-    
+
                 Scene background = new Scene(root);
                 // change the background color
                 //
                 background.getStylesheets().add(getClass().getResource("final_project_CSS.css").toExternalForm());
                 //
-                stage.setTitle("Pong Game");
-                stage.setScene(background);
-                stage.show();
-    
+                stage_temp.setTitle("Pong Game");
+                stage_temp.setScene(background);
+                stage_temp.show();
+
             } catch (Exception e) {
                 e.printStackTrace();
             }

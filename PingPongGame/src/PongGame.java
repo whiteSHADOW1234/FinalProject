@@ -88,6 +88,26 @@ public class PongGame extends Application implements Initializable {
             stage.setOnCloseRequest(e -> {
                 DJ.resume_music();
                 DJ.setVolume(currentvolume * 0.01);
+                PongGame.DJ.resume_music();
+                PongGame.DJ.setVolume(PongGame.currentvolume * 0.01);
+
+                try {
+                    Stage stage_temp = new Stage();
+                    Parent root_temp = FXMLLoader.load(getClass().getResource("final_project_startpage.fxml"));
+
+                    Scene background_temp = new Scene(root_temp);
+                    // change the background color
+                    //
+                    background_temp.getStylesheets()
+                            .add(getClass().getResource("final_project_CSS.css").toExternalForm());
+                    //
+                    stage_temp.setTitle("Pong Game");
+                    stage_temp.setScene(background_temp);
+                    stage_temp.show();
+
+                } catch (Exception e_temp) {
+                    e_temp.printStackTrace();
+                }
             });
             stage.show();
         } catch (Exception e) {

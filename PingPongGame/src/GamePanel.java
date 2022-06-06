@@ -152,10 +152,10 @@ public class GamePanel extends JPanel implements Runnable {
 	}
 
 	public int GG() {
-		if (score.player1 == 2) {
+		if (score.player1 == 11) {
 			keep_going = false;
 			return 1;
-		} else if (score.player2 == 2) {
+		} else if (score.player2 == 11) {
 			keep_going = false;
 			return 2;
 		} else

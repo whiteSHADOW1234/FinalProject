@@ -28,7 +28,7 @@ Then, create a folder in which you would like to run this project and open it.
 ![](https://i.imgur.com/sfXtJg8.png)
 
 
-3. Import Java's & JavaFX's JRE in the refer lib
+3. Import all the Java's JRE & JavaFX's jar in the lib
 
     ![](https://i.imgur.com/7xCGvRb.png)
 
@@ -172,7 +172,7 @@ Try to get eleven points first and you will win this game, good luck:smile:
 
 
 
-## Advance Mode(PVE) 
+## Advance Mode(PVE): made for those players who don't have friends
 ### Include:
 + Nice looking backgrounds (Basic Game Scene)
 + Two different colors of paddles with white parts
