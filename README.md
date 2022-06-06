@@ -109,15 +109,18 @@ Oh, don't forget to press the confirm button!!!
 (*Some secret things are hiding in here...*)
 
 
-## Developer Inf Page
+## Developer Info Page
 ### Include:
-+ Nice looking background (Developer Inf Scene)
++ Nice looking background (Developer Info Scene)
 + Four names of the game developers 
 + Email to contact us
-+ A Message Bar (No one knows how this gonna work:smile:)
++ A Text Bar (to enable beta mode)
++ A difference music playing in the background
 
 ### Description:
 :smile:You can see our name with handwriting animation and the way to contact us here !!! 
+You could enter some words in the Text Bar and you will get the hint.
+(*Some secret things are hiding in here...*)
 
 
 
@@ -142,7 +145,7 @@ After you press the Quit button, you will quit this game.
 
 
 
-## Basic Mode 
+## Basic Mode (Normal)
 ### Include:
 + Nice looking background (basic game scene)
 + Two paddles with different colors and white parts
@@ -202,7 +205,7 @@ Try to get two points first and you will win this game, good luck:smile:
 
 
 
-## Super Mode 
+## Super Mode (Infinity Ball)
 + One blue paddle (a little bigger than the other mode) with a white part
 + Nice looking background (Super Mode Scene)
 + Lots of white balls were thrown from the right of the window
@@ -222,12 +225,12 @@ Also, the number on the top-left side will show how many balls do player caught.
 
 The ending page in this mode shows how many balls do player caught in 60 seconds.
 
-
+Player could hit the *D* key to change all the balls direction on the window while the energy bar of his/her side was filled.
 
 
 ## Beta Mode 
 :warning: You Should Not See This If You Aren't The Game Developer!!!:warning:
 
-*If you change the boolean value "beta" on the 30th line of GamePanel.java to true you will enter the greatest mode of this game......* 
+*Enter the Developer Info Page and you will get some clues for this......* 
 ### The Greatest Mode ------
 Every thing in here are secrets
