@@ -53,7 +53,7 @@ Or you can just play this game with your hands(/the AI) if you don't have any fr
 + Nice looking background (Main Scene)
 + Game Start Button (with a spinning animation)
 + Setting Button (with a spinning animation)
-+ Developer Inf Button (with a spinning animation)
++ Developer Info Button (with a spinning animation)
 + Enable to play the music while playing this game
 
 
@@ -66,7 +66,7 @@ After pressing the Game Start Button, you'll enter the Mode Selecting Page.
 
 After pressing the Setting Button, you'll enter the Game Setting Page.
 
-After pressing the Developer Inf Button, you'll enter the Developer Inf Page.
+After pressing the Developer Info Button, you'll enter the Developer Info Page.
 
 
 
@@ -75,7 +75,7 @@ After pressing the Developer Inf Button, you'll enter the Developer Inf Page.
 + Nice looking background (Mode Selecting scene)
 + Basic Mode Button
 + Advance Mode(PVE) Button
-+ Super Mode(CSGO) Button 
++ Super Mode(Infinity Balls) Button 
 + Back Button
 
 ### Description:
@@ -85,7 +85,7 @@ After pressing the Basic Mode Button, you'll enter the Basic Mode.
 
 After pressing the Advance(PVE) Mode Button, you'll enter the Advance(PVE) Mode.
 
-After pressing the Super Mode Button, you'll enter the Super(CSGO) Mode.
+After pressing the Super Mode Button, you'll enter the Super(Infinity Balls) Mode.
 
 After pressing the Back Button, you'll get back to the Game Starting Scene.
 
@@ -152,7 +152,7 @@ After you press the Quit button, you will quit this game.
 + One ping pong ball starts moving in the middle of the scene
 + Two energy bars on the top of the game window 
 + Scores of each side will be shown on the top of the game window
-+ Player who gets two points first is the winner
++ Player who gets eleven points first is the winner
 
 ### Description:
 
@@ -166,7 +166,7 @@ Every time the ball touches one's paddle, the energy bar of one's side will be a
 
 Players could hit the *D*(/left arrow) key to change the ball's direction while the energy bar of his/her side was filled.
 
-Try to get two points first and you will win this game, good luck:smile:
+Try to get eleven points first and you will win this game, good luck:smile:
 
 
 
@@ -179,7 +179,7 @@ Try to get two points first and you will win this game, good luck:smile:
 + One ping pong ball starts moving in the middle of the scene
 + Two energy bars on the top of the game window 
 + Two scores will be shown on the top of the game window
-+ Player who gets two points first is the winner
++ Player who gets eleven points first is the winner
 
 
 ### Description:
@@ -197,7 +197,7 @@ Every time the ball touches one's paddle, the energy bar of one's side will be a
 
 The player could hit the *D* key to change the ball's direction while the energy bar of his/her side was filled.
 
-Try to get two points first and you will win this game, good luck:smile:
+Try to get eleven points first and you will win this game, good luck:smile:
 
 ⚠️The AI knows how to play our game. 
 
