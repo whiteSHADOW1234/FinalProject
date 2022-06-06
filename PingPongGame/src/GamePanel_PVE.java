@@ -60,8 +60,6 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 		random = new Random();
 		ball = new Ball((GAME_WIDTH / 2) - (BALL_DIAMETER / 2), random.nextInt(GAME_HEIGHT - BALL_DIAMETER),
 				BALL_DIAMETER, BALL_DIAMETER);
-		// ball = new Ball((GAME_WIDTH / 2) - (BALL_DIAMETER / 2), 300,
-		// BALL_DIAMETER, BALL_DIAMETER);
 	}
 
 	public void newPaddles() {
@@ -103,7 +101,6 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 			rd = new Random();
 			deviation = rd.nextInt(deviation_ego);
 			deviation_waiting_times = 0;
-			// System.out.println("deviation created: " + deviation);
 		}
 
 		if (ball.xVelocity > 0 || ball.x >= GAME_WIDTH / 2) {
@@ -225,7 +222,6 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 
 		}
 		if (beta) {
-			// ball.xVelocity *= 1000;
 			mp_bar_2.width += 500;
 			mp_bar_1.width += 500;
 		}
@@ -233,11 +229,9 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 	}
 
 	public void machine_skill() {
-		// System.out.println(reverse_probability);
 		if (mp_bar_2.width >= 500 && ball.x >= GAME_WIDTH / 2 && ball.xVelocity < 0) {
 			rd = new Random();
 			int chance = rd.nextInt(reverse_probability);
-			// System.out.println(chance);
 			if (chance == 0) {
 				skill_smash(2);
 			}
@@ -270,18 +264,13 @@ public class GamePanel_PVE extends JPanel implements Runnable {
 	public class AL extends KeyAdapter {
 		public void keyPressed(KeyEvent e) {
 			paddle1.keyPressed(e);
-			// paddle2.keyPressed(e);
 			if (e.getKeyCode() == KeyEvent.VK_D) {
 				skill_smash(1);
 			}
-			// else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-			// skill_smash(2);
-			// }
 		}
 
 		public void keyReleased(KeyEvent e) {
 			paddle1.keyReleased(e);
-			// paddle2.keyReleased(e);
 		}
 	}
 }

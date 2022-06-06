@@ -1,24 +1,22 @@
 import java.net.URL;
-import java.util.Random;
 import java.util.ResourceBundle;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import javafx.stage.WindowEvent;
+import javafx.stage.Stage;
 
 public class developer_information implements Initializable {
     //
     TextAnimator textAnimator1;
-
-    TextAnimator textAnimator2;
-    TextAnimator textAnimator3;
-    TextAnimator textAnimator4;
     //
 
     @FXML
@@ -64,31 +62,35 @@ public class developer_information implements Initializable {
             hint.setText("Beta mode is off\nyou should not see this \nif u are not a developer");
         } else if (command.equals("command")) {
             hint.setText("你很幽默喔");
+        } else if (command.equals("/back")){
+            Stage stage = (Stage) Huang.getScene().getWindow();
+            PongGame.DJ.resume_music();
+            PongGame.DJ.setVolume(PongGame.currentvolume * 0.01);
+            stage.close();
+
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("final_project_startpage.fxml"));
+    
+                Scene background = new Scene(root);
+                // change the background color
+                //
+                background.getStylesheets().add(getClass().getResource("final_project_CSS.css").toExternalForm());
+                //
+                stage.setTitle("Pong Game");
+                stage.setScene(background);
+                stage.show();
+    
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         } else {
-            hint.setText("try /betamode on \nor /betamode off");
-            // hint.setText("clear: clear the terminal");
+            hint.setText("try /betamode on \nor /betamode off\nor /back");
         }
     }
 
-    // void text_animation() {
-    // // change text
-    // try {
-    // String text = "";
-    // Huang.setText(text);
-    // System.out.println("hello");
-    // } catch (Exception e) {
-    // System.out.println(e.getMessage());
-    // }
-    // }
-
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        // TODO Auto-generated method stub
-        // try {
-        // text_animation();
-        // } catch (Exception e) {
-        // System.out.println(e.getMessage());
-        // }
 
         //
         PongGame.DJ.pause();
@@ -118,20 +120,7 @@ public class developer_information implements Initializable {
         };
 
         textAnimator1 = new TextAnimator(100, textOutput, 1);
-        // textAnimator2 = new TextAnimator("Cheng-De Lee", 100, textOutput, 2);
-        // textAnimator3 = new TextAnimator("Ming-yu Shieh", 100, textOutput, 3);
-        // textAnimator4 = new TextAnimator("Chia-Zung Kuo", 100, textOutput, 4);
-
         Thread thread1 = new Thread(textAnimator1);
-        // Thread thread2 = new Thread(textAnimator2);
-        // Thread thread3 = new Thread(textAnimator3);
-        // Thread thread4 = new Thread(textAnimator4);
-
         thread1.start();
-        // thread2.start();
-        // thread3.start();
-        // thread4.start();
-
     }
-
 }

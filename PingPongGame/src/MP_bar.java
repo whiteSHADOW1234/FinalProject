@@ -28,8 +28,5 @@ public class MP_bar extends Rectangle {
         else
             g.setColor(Color.red);
         g.fillRect(x, y, width, height);
-        // white
-        // g.setColor(Color.white);
-        // g.fillRect(x, y + 40, width, height - 80);
     }
 }

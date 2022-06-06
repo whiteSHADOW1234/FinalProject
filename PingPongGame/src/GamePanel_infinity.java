@@ -70,7 +70,6 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 
 	public void newMP_bar() {
 		mp_bar_1 = new MP_bar(0, 0, MP_bar_WIDTH, MP_bar_HEIGHT, 1);
-		// mp_bar_2 = new MP_bar((GAME_WIDTH / 2), 0, MP_bar_WIDTH, MP_bar_HEIGHT, 2);
 	}
 
 	public void paint(Graphics g) {
@@ -82,9 +81,7 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 
 	public void draw(Graphics g) {
 		paddle1.draw(g);
-		// paddle2.draw(g);
 		mp_bar_1.draw(g);
-		// mp_bar_2.draw(g);
 		for (Ball_infinity currentball : balls_above_all) {
 			currentball.draw(g);
 		}
@@ -96,7 +93,6 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 
 	public void move() {
 		paddle1.move();
-		// paddle2.move();
 		for (Ball_infinity currentball : balls_above_all) {
 			currentball.move();
 		}
@@ -125,30 +121,11 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 				mp_bar_1.increase(ball_pos <= paddle1.y + paddle1.height / 2 + white_bar_HEIGHT / 2
 						&& ball_pos >= paddle1.y + paddle1.height / 2 - white_bar_HEIGHT / 2);
 			}
-			// if (ball.intersects(paddle2)) {
-			// ball.xVelocity = Math.abs(ball.xVelocity);
-			// ball.xVelocity++; // optional for more difficulty
-			// if (ball.yVelocity > 0)
-			// ball.yVelocity++; // optional for more difficulty
-			// else
-			// ball.yVelocity--;
-			// ball.setXDirection(-ball.xVelocity);
-			// ball.setYDirection(ball.yVelocity);
-			// mp_bar_2.increase(ball_pos <= paddle2.y + paddle2.height / 2 +
-			// white_bar_HEIGHT / 2
-			// && ball_pos >= paddle2.y + paddle2.height / 2 - white_bar_HEIGHT / 2);
-			// }
-
 			// stops paddles at window edges
 			if (paddle1.y <= 0)
 				paddle1.y = 0;
 			if (paddle1.y >= (GAME_HEIGHT - PADDLE_HEIGHT))
 				paddle1.y = GAME_HEIGHT - PADDLE_HEIGHT;
-
-			// if (paddle2.y <= 0)
-			// paddle2.y = 0;
-			// if (paddle2.y >= (GAME_HEIGHT - PADDLE_HEIGHT))
-			// paddle2.y = GAME_HEIGHT - PADDLE_HEIGHT;
 
 			// give a player 1 point and creates new paddles & ball
 			if (CurrentBall.x <= 0) {
@@ -210,7 +187,6 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 			}
 			if (beta) {
 				currentball.xVelocity *= -1000;
-				// mp_bar_2.width = 500;
 				mp_bar_1.width = 500;
 			}
 		}
@@ -264,20 +240,15 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 	public class AL extends KeyAdapter {
 		public void keyPressed(KeyEvent e) {
 			paddle1.keyPressed(e);
-			// paddle2.keyPressed(e);
 			if (!beta && e.getKeyCode() == KeyEvent.VK_D && all_time_always <= 60 * 55) {
 				skill_smash(1);
 			} else if (beta && e.getKeyCode() == KeyEvent.VK_D && all_time_always <= 60 * 5) {
 				skill_smash(1);
 			}
-			// } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-			// skill_smash(2);
-			// }
 		}
 
 		public void keyReleased(KeyEvent e) {
 			paddle1.keyReleased(e);
-			// paddle2.keyReleased(e);
 		}
 	}
 }

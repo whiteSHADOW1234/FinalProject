@@ -3,13 +3,9 @@ import java.util.ResourceBundle;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.Interpolator;
-import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-// import javafx.application.Platform;
-// import javafx.beans.InvalidationListener;
-// import javafx.beans.Observable;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -76,6 +72,9 @@ public class PongGame extends Application implements Initializable {
 
     @FXML
     void Developer_Information(ActionEvent event) {
+        Stage start_stage = (Stage) start.getScene().getWindow();
+        start_stage.close();
+
         Stage stage = new Stage();
         try {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_developer_information.fxml"));
@@ -101,12 +100,8 @@ public class PongGame extends Application implements Initializable {
         try {
             if (speedsetting.getText() == "") {
                 // change paddle machine_speed
-                // GF.panel.paddle2.machine_speed = 10;
                 GameModeController.AI_speed = 10;
-                // speedsetting.setText("10");
-                // System.out.println("NULL");
             } else {
-                // System.out.println("NOT NULL");
                 input_ball_speed = speedsetting.getText();
                 input_ball_speed_int = Integer.parseInt(input_ball_speed);
                 GameModeController.AI_speed = input_ball_speed_int;
@@ -244,18 +239,6 @@ public class PongGame extends Application implements Initializable {
         fade3.setFromValue(0);
         fade3.setToValue(1);
         fade3.play();
-
-        // text animation
-
-        // FadeTransition fadetext = new FadeTransition();
-        // fadetext.setNode(dev.Huang);
-        // fadetext.setDuration(Duration.seconds(1));
-        // fadetext.setCycleCount(1);
-        // fadetext.setInterpolator(Interpolator.LINEAR);
-        // fadetext.setFromValue(0);
-        // fadetext.setToValue(1);
-        // fadetext.play();
-
     }
 
     // 重開遊戲聲音變小
@@ -305,14 +288,6 @@ public class PongGame extends Application implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        // Stage stage = (Stage) start.getScene().getWindow();
-        // stage.close();
-        // GameFrame GF = new GameFrame();
-        // // GameFrame_PVE GF = new GameFrame_PVE();
-        // PongGame.currentvolume = GF.check_if_GG();
-
-        // end_page_starter(stage);
     }
 
     public void end_page_starter(Stage stage) {
