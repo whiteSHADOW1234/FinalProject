@@ -15,6 +15,7 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 	static final int MP_bar_HEIGHT = 20;
 	static int white_bar_HEIGHT = 50;
 	static int fire_rate_per_second = 1;
+	double all_time_always;
 
 	Thread gameThread;
 	Image image;
@@ -225,7 +226,7 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 		double amountOfTicks = 60.0;
 		double ns = 1000000000 / amountOfTicks;
 		double delta = 0;
-		double all_time_always = 0;
+		all_time_always = 0;
 		double fire_newball_time = 0;
 		double per_sec = 0;
 		while (keep_going) {
@@ -264,7 +265,9 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 		public void keyPressed(KeyEvent e) {
 			paddle1.keyPressed(e);
 			// paddle2.keyPressed(e);
-			if (e.getKeyCode() == KeyEvent.VK_D) {
+			if (!beta && e.getKeyCode() == KeyEvent.VK_D && all_time_always <= 60 * 55) {
+				skill_smash(1);
+			} else if (beta && e.getKeyCode() == KeyEvent.VK_D && all_time_always <= 60 * 5) {
 				skill_smash(1);
 			}
 			// } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
