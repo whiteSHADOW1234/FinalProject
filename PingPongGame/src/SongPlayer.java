@@ -32,11 +32,14 @@ public class SongPlayer extends Thread {
         media = new Media(songs.get(songNumber).toURI().toString());
         mediaPlayer = new MediaPlayer(media);
         mediaPlayer.play();
-        double current = mediaPlayer.getCurrentTime().toSeconds();
-        double end = media.getDuration().toSeconds();
 
-        if (current / end == 1) {
-            mediaPlayer.seek(Duration.seconds(0));
+        while (true) {
+            double current = mediaPlayer.getCurrentTime().toSeconds();
+            double end = media.getDuration().toSeconds();
+
+            if (current / end >= 1) {
+                mediaPlayer.seek(Duration.seconds(0));
+            }
         }
     }
 
@@ -49,25 +52,12 @@ public class SongPlayer extends Thread {
         media = new Media(songs.get(1).toURI().toString());
         mediaPlayer = new MediaPlayer(media);
         mediaPlayer.play();
-        double current = mediaPlayer.getCurrentTime().toSeconds();
-        double end = media.getDuration().toSeconds();
-
-        if (current / end == 1) {
-            mediaPlayer.seek(Duration.seconds(0));
-        }
     }
 
     public void resume_music() {
         mediaPlayer.pause();
         media = new Media(songs.get(0).toURI().toString());
         mediaPlayer = new MediaPlayer(media);
-        mediaPlayer.play();
-        double current = mediaPlayer.getCurrentTime().toSeconds();
-        double end = media.getDuration().toSeconds();
-
-        if (current / end == 1) {
-            mediaPlayer.seek(Duration.seconds(0));
-        }
         mediaPlayer.play();
     }
 
