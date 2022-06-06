@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import javafx.stage.WindowEvent;
 
 public class developer_information implements Initializable {
     //
@@ -90,6 +91,8 @@ public class developer_information implements Initializable {
         // }
 
         //
+        PongGame.DJ.pause();
+        PongGame.DJ.setVolume(PongGame.currentvolume * 0.01);
         TextOutput textOutput = new TextOutput() {
             @Override
             public void writeText(String textOut, int id) {

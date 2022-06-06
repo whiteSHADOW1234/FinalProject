@@ -28,7 +28,7 @@ import javafx.scene.input.MouseEvent;
 public class PongGame extends Application implements Initializable {
     static int winner;
     static int currentvolume = 50;
-    SongPlayer DJ = new SongPlayer();
+    static SongPlayer DJ = new SongPlayer();
     //
     developer_information dev = new developer_information();
     //
@@ -86,6 +86,10 @@ public class PongGame extends Application implements Initializable {
             //
             stage.setTitle("Developers Information");
             stage.setScene(background);
+            stage.setOnCloseRequest(e -> {
+                DJ.resume_music();
+                DJ.setVolume(currentvolume * 0.01);
+            });
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
