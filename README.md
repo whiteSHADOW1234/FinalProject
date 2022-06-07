@@ -60,7 +60,7 @@ Or you can just play this game with your hands(/the AI) if you don't have any fr
 ### Description:
 This is the first screen that pops up after you run this project on your device which had to finish setting up the environment.
 
-You will probably see two buttons float up.
+You will probably see three buttons float up.
 
 After pressing the Game Start Button, you'll enter the Mode Selecting Page.
 
