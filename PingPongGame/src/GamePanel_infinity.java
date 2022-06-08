@@ -144,7 +144,10 @@ public class GamePanel_infinity extends JPanel implements Runnable {
 
 	public int GG() {
 		if (keep_going == false) {
-			return score.player1;
+			if (score.player1 != 0)
+				return score.player1;
+			else
+				return 426;
 		} else
 			return 0;
 	}

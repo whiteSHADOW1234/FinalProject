@@ -194,7 +194,10 @@ public class PongGame extends Application implements Initializable {
                 System.out.println("red");
                 situation.setText("紅方獲勝");
             } else if (PongGame.winner < 0) {
-                situation.setText("成功擊球數 " + -1 * PongGame.winner);
+                if (PongGame.winner == -426)
+                    situation.setText("You sucks");
+                else
+                    situation.setText("成功擊球數 " + -1 * PongGame.winner);
             } else {
                 situation.setText("ERROR s" + PongGame.winner);
             }
