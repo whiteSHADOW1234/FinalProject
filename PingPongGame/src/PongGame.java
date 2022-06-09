@@ -153,6 +153,22 @@ public class PongGame extends Application implements Initializable {
     void Setting_Back(ActionEvent event) {
         Stage SETTING = (Stage) setting_back.getScene().getWindow();
         SETTING.close();
+        Stage stage = new Stage();
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("final_project_startpage.fxml"));
+
+            Scene background = new Scene(root);
+            // change the background color
+            //
+            background.getStylesheets().add(getClass().getResource("final_project_CSS.css").toExternalForm());
+            //
+            stage.setTitle("Pong Game");
+            stage.setScene(background);
+            stage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -162,7 +178,8 @@ public class PongGame extends Application implements Initializable {
 
     @FXML
     void Setting(ActionEvent event) {
-
+        Stage start_stage = (Stage) start.getScene().getWindow();
+        start_stage.close();
         Stage SETTING = new Stage();
         try {
             Parent root = FXMLLoader.load(getClass().getResource("final_project_settingpage.fxml"));
