@@ -23,7 +23,7 @@ import javafx.scene.input.MouseEvent;
 
 public class PongGame extends Application implements Initializable {
     static int winner;
-    static int currentvolume = 50;
+    static int currentvolume = 50; //too loud
     static SongPlayer DJ = new SongPlayer();
     //
     developer_information dev = new developer_information();
@@ -127,8 +127,8 @@ public class PongGame extends Application implements Initializable {
                 GameModeController.AI_speed = input_ball_speed_int;
             }
         } catch (NumberFormatException e) {
-            customize_speed.setText("å¿«æ»¾ä½èƒ½å…’");
-            System.out.println("å¿«æ»¾ä½èƒ½å…’");
+            customize_speed.setText("å¿«æ»¾ä½???½å??");
+            System.out.println("å¿«æ»¾ä½???½å??");
         }
     }
 
@@ -206,15 +206,15 @@ public class PongGame extends Application implements Initializable {
         try {
             if (PongGame.winner == 1) {
                 System.out.println("blue");
-                situation.setText("è—æ–¹ç²å‹");
+                situation.setText("?????¹ç?²å??");
             } else if (PongGame.winner == 2) {
                 System.out.println("red");
-                situation.setText("ç´…æ–¹ç²å‹");
+                situation.setText("ç´???¹ç?²å??");
             } else if (PongGame.winner < 0) {
                 if (PongGame.winner == -426)
                     situation.setText("You sucks");
                 else
-                    situation.setText("æˆåŠŸæ“Šçƒæ•¸ " + -1 * PongGame.winner);
+                    situation.setText("??????????????? " + -1 * PongGame.winner);
             } else {
                 situation.setText("ERROR s" + PongGame.winner);
             }
@@ -281,7 +281,7 @@ public class PongGame extends Application implements Initializable {
         fade3.play();
     }
 
-    // é‡é–‹éŠæˆ²è²éŸ³è®Šå°
+    // ???????????²è?²é?³è??å°?
     @FXML
     void restart(ActionEvent event) {
         Stage stage = (Stage) restart.getScene().getWindow();
@@ -303,10 +303,10 @@ public class PongGame extends Application implements Initializable {
     public void win_display() {
         if (PongGame.currentvolume == 1) {
             System.out.println("blue");
-            situation.setText("è—æ–¹ç²å‹");
+            situation.setText("?????¹ç?²å??");
         } else if (PongGame.currentvolume == 2) {
             System.out.println("red");
-            situation.setText("ç´…æ–¹ç²å‹");
+            situation.setText("ç´???¹ç?²å??");
         } else {
             situation.setText("Error " + PongGame.currentvolume);
         }
